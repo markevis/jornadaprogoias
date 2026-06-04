@@ -1,0 +1,87 @@
+.proofSection {
+  background-color: var(--white);
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.header h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--bg-neutral);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  position: relative;
+}
+
+.quoteIcon {
+  font-family: serif;
+  font-size: 6rem;
+  color: var(--secondary);
+  opacity: 0.2;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 1;
+}
+
+.quoteText {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  font-style: italic;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: bold;
+}
+
+.authorName {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.authorRole {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.ctaWrapper {
+  text-align: center;
+}

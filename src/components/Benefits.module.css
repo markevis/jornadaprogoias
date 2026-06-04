@@ -1,0 +1,67 @@
+.benefitsSection {
+  background-color: #f1f8ff; /* Fundo leve azulado, alinhado com neutral/primary */
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.header h2 {
+  font-size: 2.25rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,86,179,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,86,179,0.1);
+  border-top: 4px solid var(--secondary);
+}
+
+.iconWrapper {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  padding: 15px;
+  background-color: rgba(0,123,255,0.05); /* Usando Secondary color com alpha */
+  border-radius: 50%;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.ctaWrapper {
+  text-align: center;
+}

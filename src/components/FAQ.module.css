@@ -1,0 +1,80 @@
+.faqSection {
+  background-color: var(--white);
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.header h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+}
+
+.accordionContainer {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.accordionItem {
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordionItem.active {
+  border-color: var(--primary);
+  box-shadow: 0 5px 15px rgba(0,86,179,0.1);
+}
+
+.accordionTitle {
+  width: 100%;
+  background: var(--white);
+  padding: 1.5rem;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-heading);
+}
+
+.accordionItem.active .accordionTitle {
+  color: var(--primary);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: var(--bg-neutral);
+}
+
+.innerContent {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.ctaWrapper {
+  text-align: center;
+}

@@ -1,0 +1,230 @@
+.simulatorSection {
+  background-color: var(--white);
+  padding-bottom: var(--spacing-xl);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.simulatorWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.formPanel {
+  padding: 3rem;
+  background-color: #fcfcfc;
+  border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.formGroup input, .formGroup select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.formGroup input:focus, .formGroup select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0,86,179,0.1);
+}
+
+.calcBtn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 16px;
+  font-size: 1.2rem;
+}
+
+/* Painel de Resultados */
+.resultPanel {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(to bottom right, #ffffff, #f1f8ff);
+}
+
+.emptyState, .loadingState {
+  text-align: center;
+}
+
+.iconCalc {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyState h3 {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(0,86,179,0.1);
+  border-left-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1.5rem auto;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.resultsBox {
+  width: 100%;
+  animation: fadeIn 0.5s ease;
+}
+
+.resultsBox h3 {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.resultItem {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.valueHighlight {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: var(--font-heading);
+}
+
+.valueAccent {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-family: var(--font-heading);
+}
+
+.leadCaptureBox {
+  margin-top: 2.5rem;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px dashed #ced4da;
+  text-align: center;
+}
+
+.leadCaptureBox h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.leadCaptureBox p {
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.leadForm {
+  display: flex;
+  gap: 10px;
+}
+
+.leadForm input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+}
+
+.successMsg {
+  color: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.successMsg .iconCheck {
+  font-size: 2rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .simulatorWrapper {
+    grid-template-columns: 1fr;
+  }
+  .formPanel, .resultPanel {
+    padding: 2rem;
+  }
+  .resultItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .leadForm {
+    flex-direction: column;
+  }
+}
