@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import ProblemOpportunity from './components/ProblemOpportunity';
 import Simulator from './components/Simulator';
 import Benefits from './components/Benefits';
+import Pricing from './components/Pricing';
 import SocialProof from './components/SocialProof';
 import TimelineSteps from './components/TimelineSteps';
 import FAQ from './components/FAQ';
@@ -16,6 +17,7 @@ function App() {
       <ProblemOpportunity />
       <Simulator />
       <Benefits />
+      <Pricing />
       <SocialProof />
       <TimelineSteps />
       <FAQ />
