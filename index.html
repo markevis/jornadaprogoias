@@ -358,7 +358,7 @@
       <div class="card-lift bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
         <h3 class="font-heading font-bold text-navy text-xl mb-2">Plano Mensal</h3>
         <p class="text-gray-500 text-sm leading-relaxed mb-6">Acesso completo. Cancele a qualquer momento, sem multas.</p>
-        <div class="flex items-end gap-1 mb-6"><span class="text-gray-400 text-sm">R$</span><span class="font-heading font-bold text-navy text-5xl">149</span><span class="text-gray-400 text-sm mb-1">/mês</span></div>
+        <div class="flex items-end gap-1 mb-6"><span class="text-gray-400 text-sm">R$</span><span id="price-mensal" class="font-heading font-bold text-navy text-5xl">149</span><span class="text-gray-400 text-sm mb-1">/mês</span></div>
         <ul class="space-y-2.5 mb-8 text-sm text-gray-600">
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Diagnóstico de elegibilidade</li>
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Simulação financeira completa</li>
@@ -373,7 +373,7 @@
         <div class="absolute -top-4 left-0 right-0 flex justify-center"><span class="bg-teal text-white text-xs font-heading font-bold px-5 py-1.5 rounded-full">⭐ Mais Popular</span></div>
         <h3 class="font-heading font-bold text-white text-xl mb-2">Plano Semestral</h3>
         <p class="text-blue-200 text-sm leading-relaxed mb-6">Economia de 2 meses. Melhor custo-benefício para processo ativo.</p>
-        <div class="flex items-end gap-1 mb-6"><span class="text-blue-300 text-sm">R$</span><span class="font-heading font-bold text-white text-5xl">779</span><span class="text-blue-300 text-sm mb-1">/semestre</span></div>
+        <div class="flex items-end gap-1 mb-6"><span class="text-blue-300 text-sm">R$</span><span id="price-semestral" class="font-heading font-bold text-white text-5xl">779</span><span class="text-blue-300 text-sm mb-1">/semestre</span></div>
         <ul class="space-y-2.5 mb-8 text-sm text-blue-200">
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Tudo do Plano Mensal</li>
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Acesso a consultores especializados</li>
@@ -387,7 +387,7 @@
         <div class="absolute -top-4 left-0 right-0 flex justify-center"><span class="bg-navy text-white text-xs font-heading font-bold px-5 py-1.5 rounded-full">💰 Melhor Custo-Benefício</span></div>
         <h3 class="font-heading font-bold text-navy text-xl mb-2">Plano Anual</h3>
         <p class="text-gray-500 text-sm leading-relaxed mb-6">Máxima economia com 12 meses, consultoria dedicada e SLA.</p>
-        <div class="flex items-end gap-1 mb-6"><span class="text-gray-400 text-sm">R$</span><span class="font-heading font-bold text-navy text-5xl">1.429</span><span class="text-gray-400 text-sm mb-1">/ano</span></div>
+        <div class="flex items-end gap-1 mb-6"><span class="text-gray-400 text-sm">R$</span><span id="price-anual" class="font-heading font-bold text-navy text-5xl">1.429</span><span class="text-gray-400 text-sm mb-1">/ano</span></div>
         <ul class="space-y-2.5 mb-8 text-sm text-gray-600">
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Tudo do Plano Semestral</li>
           <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Consultoria dedicada mensal</li>
@@ -653,7 +653,11 @@
 </footer>
 
 <script>
-  const CONFIG = { API_BASE: 'http://localhost:3001/api' };
+  const STRIPE_LINKS = {
+    mensal:    'https://buy.stripe.com/test_fZu3cxd5U94xaK6b3i3Nm00',
+    semestral: 'https://buy.stripe.com/test_aFa5kFgi65Sl2dA4EU3Nm01',
+    anual:     'https://buy.stripe.com/test_aFa28te9YeoR3hE9Ze3Nm02',
+  };
   lucide.createIcons();
 
   window.addEventListener('scroll', () => {
@@ -708,35 +712,18 @@
     document.getElementById('leadSuccess').classList.remove('hidden');
   }
 
-  async function initPricing() {
-    try {
-      const res = await fetch(`${CONFIG.API_BASE}/stripe/plans`);
-      if (!res.ok) throw new Error();
-      const { plans } = await res.json();
-      if (!plans?.length) throw new Error();
-    } catch (_) {}
-    finally {
-      document.getElementById('pricingLoading').classList.add('hidden');
-      document.getElementById('pricingGrid').classList.remove('hidden');
-      lucide.createIcons();
-    }
+  function initPricing() {
+    document.getElementById('pricingLoading').classList.add('hidden');
+    document.getElementById('pricingGrid').classList.remove('hidden');
+    lucide.createIcons();
   }
 
-  async function checkout(slug, btn) {
-    const orig = btn.textContent;
-    btn.disabled = true; btn.textContent = 'Redirecionando...';
-    try {
-      const res = await fetch(`${CONFIG.API_BASE}/stripe/checkout/public`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan_slug: slug }),
-      });
-      if (!res.ok) throw new Error();
-      const { checkout_url } = await res.json();
-      window.location.href = checkout_url;
-    } catch (_) {
-      alert('Não foi possível iniciar o checkout. Tente novamente.');
-      btn.disabled = false; btn.textContent = orig;
-    }
+  function checkout(slug, btn) {
+    const url = STRIPE_LINKS[slug];
+    if (!url) return;
+    btn.disabled = true;
+    btn.textContent = 'Redirecionando...';
+    window.location.href = url;
   }
 
   function toggleFaq(btn) {
