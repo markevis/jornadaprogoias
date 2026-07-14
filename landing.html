@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ProGoiás - Consultoria Tributária | Economize até 67% no ICMS</title>
-  <meta name="description" content="Descubra como sua empresa pode reduzir até 67% no ICMS com o principal incentivo fiscal de Goiás. Consultoria especializada e processo 100% digital.">
+  <title>ProGoiás Fácil — Adesão ao ProGoiás Descomplicada | Reduza Até 67% do ICMS</title>
+  <meta name="description"
+    content="O App ProGoiás Fácil é a maneira mais rápida de aderir ao ProGoiás. Diagnóstico automático, simulação financeira, gestão de documentos e monitoramento — tudo em um só lugar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
   <script>
@@ -15,834 +19,1459 @@
       theme: {
         extend: {
           colors: {
-            navy:   '#003366',
-            royal:  '#0056B3',
-            gold:   '#D97706',
-            light:  '#F4F7F6',
+            navy: '#1B3A5E',
+            'navy-dark': '#122843',
+            teal: '#2EC4B6',
+            'teal-dark': '#22A89B',
+            'teal-light': '#EAF8F7',
+            'teal-mid': '#B2E8E4',
+            gold: '#F59E0B',
           },
           fontFamily: {
             heading: ['Montserrat', 'sans-serif'],
-            body:    ['Open Sans', 'sans-serif'],
+            body: ['Open Sans', 'sans-serif'],
           }
         }
       }
     }
   </script>
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Open Sans', sans-serif; }
-    h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat', sans-serif; }
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
 
     .hero-bg {
-      background: linear-gradient(135deg, #003366 0%, #0056B3 60%, #00449E 100%);
+      background: linear-gradient(135deg, #122843 0%, #1B3A5E 55%, #1E4975 100%);
     }
-    .card-hover {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    .cover-bg {
+      background: linear-gradient(135deg, #1B3A5E 0%, #122843 100%);
     }
-    .card-hover:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 40px rgba(0,51,102,0.15);
+
+    .card-lift {
+      transition: transform .3s ease, box-shadow .3s ease;
     }
-    .pricing-featured {
-      background: linear-gradient(135deg, #003366 0%, #0056B3 100%);
+
+    .card-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(27, 58, 94, .12);
+    }
+
+    .plan-featured {
+      background: linear-gradient(135deg, #1B3A5E 0%, #1E4975 100%);
       transform: scale(1.04);
     }
-    .pricing-featured.card-hover:hover {
-      transform: scale(1.04) translateY(-6px);
+
+    .plan-featured.card-lift:hover {
+      transform: scale(1.04) translateY(-5px);
     }
-    .accordion-body {
+
+    .acc-body {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.35s ease;
+      transition: max-height .35s ease;
     }
-    .accordion-body.open { max-height: 400px; }
-    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .acc-body.open {
+      max-height: 500px;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
     .spinner {
-      width: 36px; height: 36px;
-      border: 4px solid rgba(0,86,179,.2);
-      border-top-color: #0056B3;
+      width: 36px;
+      height: 36px;
+      border: 4px solid rgba(46, 196, 182, .25);
+      border-top-color: #2EC4B6;
       border-radius: 50%;
       animation: spin .8s linear infinite;
     }
-    @keyframes pulse2 { 0%,100%{opacity:1} 50%{opacity:.5} }
-    .dot-pulse { animation: pulse2 2s infinite; }
-    .nav-solid { background: white !important; box-shadow: 0 2px 20px rgba(0,0,0,.08); }
-    .nav-solid .nav-link { color: #003366 !important; }
-    .nav-solid .nav-brand { color: #003366 !important; }
-    .nav-solid .nav-cta { background: #003366 !important; }
-    .timeline-line::after {
-      content:'';
-      position:absolute;
-      left:23px; top:52px;
-      width:2px; bottom:-16px;
-      background: linear-gradient(to bottom, #0056B3 0%, transparent 100%);
+
+    .nav-solid {
+      background: #fff !important;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, .08);
+    }
+
+    .nav-solid .nav-link {
+      color: #1B3A5E !important;
+    }
+
+    .nav-solid .nav-brand {
+      color: #1B3A5E !important;
+    }
+
+    .step-line::after {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 52px;
+      bottom: -16px;
+      width: 2px;
+      background: linear-gradient(to bottom, #2EC4B6, transparent);
+    }
+
+    .urgency-bar {
+      background: #cc0000;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 22s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    .marquee-item {
+      white-space: nowrap;
+      padding-right: 80px;
+    }
+
+    @keyframes marquee-scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .sector-card {
+      transition: all .3s ease;
+    }
+
+    .sector-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .price-original {
+      text-decoration: line-through;
+      color: #9CA3AF;
+    }
+
+    /* Navbar logo image */
+    .nav-logo-img {
+      height: 64px; /* Mobile size */
+      width: auto;
+      object-fit: contain;
+      border-radius: 6px;
+      transition: border-radius 0.3s, box-shadow 0.3s, height 0.3s;
+    }
+    @media (min-width: 768px) {
+      .nav-logo-img {
+        height: 128px; /* Matches footer's h-32 */
+      }
+    }
+    .nav-solid .nav-logo-img {
+      border-radius: 8px;
+      box-shadow: 0 0 0 1px rgba(27,58,94,0.12), 0 2px 8px rgba(27,58,94,0.10);
     }
   </style>
 </head>
+
 <body class="bg-white text-gray-800">
 
-<!-- NAV -->
-<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 md:h-20">
+  <!-- URGENCY BAR -->
+  <div class="urgency-bar fixed top-0 left-0 right-0 text-white py-2.5 text-sm font-heading font-semibold z-50">
+    <div class="marquee-track">
+      <!-- Repeat 8x so the loop is seamless -->
+      <span class="marquee-item">🔥 <strong>OFERTA ESPECIAL</strong> &nbsp;·&nbsp; Desconto encerra em: <span id="countdown" class="font-bold">23:59:47</span> &nbsp;·&nbsp; <a href="#planos" class="underline text-white">Ver planos</a></span>
+      <span class="marquee-item">🔥 <strong>OFERTA ESPECIAL</strong> &nbsp;·&nbsp; Desconto encerra em: <span class="countdown-clone font-bold">23:59:47</span> &nbsp;·&nbsp; <a href="#planos" class="underline text-white">Ver planos</a></span>
+      <span class="marquee-item">🔥 <strong>OFERTA ESPECIAL</strong> &nbsp;·&nbsp; Desconto encerra em: <span class="countdown-clone font-bold">23:59:47</span> &nbsp;·&nbsp; <a href="#planos" class="underline text-white">Ver planos</a></span>
+      <span class="marquee-item">🔥 <strong>OFERTA ESPECIAL</strong> &nbsp;·&nbsp; Desconto encerra em: <span class="countdown-clone font-bold">23:59:47</span> &nbsp;·&nbsp; <a href="#planos" class="underline text-white">Ver planos</a></span>
+      <!-- Duplicate set for seamless loop -->
+      <span class="marquee-item">🔥 <strong>OFERTA ESPECIAL</strong> &nbsp;·&nbsp; Desconto encerra em: <span class="countdown-clone font-bold">23:59:47</span> &nbsp;·&nbsp; <a href="#planos" class="underline text-white">Ver planos</a></span>
+      <span class="marquee-item">🔥 <strong>OFERTA ESPECIAL</strong> &nbsp;·&nbsp; Desconto encerra em: <span class="countdown-clone font-bold">23:59:47</span> &nbsp;·&nbsp; <a href="#planos" class="underline text-white">Ver planos</a></span>
+      <span class="marquee-item">🔥 <strong>OFERTA ESPECIAL</strong> &nbsp;·&nbsp; Desconto encerra em: <span class="countdown-clone font-bold">23:59:47</span> &nbsp;·&nbsp; <a href="#planos" class="underline text-white">Ver planos</a></span>
+      <span class="marquee-item">🔥 <strong>OFERTA ESPECIAL</strong> &nbsp;·&nbsp; Desconto encerra em: <span class="countdown-clone font-bold">23:59:47</span> &nbsp;·&nbsp; <a href="#planos" class="underline text-white">Ver planos</a></span>
+    </div>
+  </div>
 
-      <div class="flex items-center gap-2">
-        <div class="w-9 h-9 bg-gold rounded-xl flex items-center justify-center flex-shrink-0">
-          <span class="text-white font-bold text-sm font-heading">PG</span>
+  <!-- NAV -->
+  <nav id="navbar" class="fixed top-10 left-0 right-0 z-40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-24 md:h-32">
+        <a href="#" class="flex items-center" aria-label="Pro Goiás Fácil">
+          <img
+            src="assets/logo-horizontal.jpg"
+            alt="Pro Goiás Fácil"
+            class="nav-logo-img"
+          >
+        </a>
+        <div class="hidden md:flex items-center gap-6">
+          <a href="#funcionalidades"
+            class="nav-link text-white/80 hover:text-teal text-sm font-medium transition-colors">Funcionalidades</a>
+          <a href="#para-quem" class="nav-link text-white/80 hover:text-teal text-sm font-medium transition-colors">Para
+            Quem É</a>
+          <a href="#como-funciona"
+            class="nav-link text-white/80 hover:text-teal text-sm font-medium transition-colors">Como Funciona</a>
+          <a href="#planos"
+            class="nav-link text-white/80 hover:text-teal text-sm font-medium transition-colors">Planos</a>
+          <a href="#faq" class="nav-link text-white/80 hover:text-teal text-sm font-medium transition-colors">FAQ</a>
+          <a href="#planos"
+            class="bg-teal hover:bg-teal-dark text-white px-5 py-2.5 rounded-xl font-heading font-semibold text-sm transition-all hover:-translate-y-0.5">Começar
+            Agora</a>
         </div>
-        <span class="nav-brand font-heading font-bold text-xl text-white transition-colors">ProGoiás</span>
-      </div>
-
-      <div class="hidden md:flex items-center gap-7">
-        <a href="#beneficios"    class="nav-link text-white/80 hover:text-white text-sm font-medium transition-colors">Benefícios</a>
-        <a href="#como-funciona" class="nav-link text-white/80 hover:text-white text-sm font-medium transition-colors">Como Funciona</a>
-        <a href="#planos"        class="nav-link text-white/80 hover:text-white text-sm font-medium transition-colors">Planos</a>
-        <a href="#faq"           class="nav-link text-white/80 hover:text-white text-sm font-medium transition-colors">FAQ</a>
-        <a href="#planos" class="nav-cta bg-gold text-white px-5 py-2.5 rounded-xl font-heading font-semibold text-sm hover:bg-amber-600 transition-all">Começar Agora</a>
-      </div>
-
-      <button id="menuBtn" class="md:hidden text-white p-1">
-        <i data-lucide="menu" class="w-6 h-6"></i>
-      </button>
-    </div>
-  </div>
-  <div id="mobileMenu" class="hidden md:hidden bg-navy px-4 pb-4 pt-1">
-    <div class="flex flex-col gap-2">
-      <a href="#beneficios"    class="text-white/80 py-2 text-sm border-b border-white/10" onclick="closeMobileMenu()">Benefícios</a>
-      <a href="#como-funciona" class="text-white/80 py-2 text-sm border-b border-white/10" onclick="closeMobileMenu()">Como Funciona</a>
-      <a href="#planos"        class="text-white/80 py-2 text-sm border-b border-white/10" onclick="closeMobileMenu()">Planos</a>
-      <a href="#faq"           class="text-white/80 py-2 text-sm border-b border-white/10" onclick="closeMobileMenu()">FAQ</a>
-      <a href="#planos" class="mt-2 bg-gold text-white px-4 py-3 rounded-xl text-center text-sm font-semibold" onclick="closeMobileMenu()">Começar Agora</a>
-    </div>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero-bg min-h-screen flex flex-col justify-center pt-20 pb-16 relative overflow-hidden">
-  <div class="absolute inset-0 overflow-hidden">
-    <div class="absolute -top-20 -left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-400/10 rounded-full blur-3xl"></div>
-  </div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-        <span class="w-2 h-2 bg-emerald-400 rounded-full dot-pulse"></span>
-        <span class="text-white/90 text-sm font-medium">Programa Oficial de Incentivo Fiscal — Estado de Goiás</span>
-      </div>
-      <h1 class="text-white font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
-        Desbloqueie até<br>
-        <span class="text-gold">67% de Economia</span><br>
-        no ICMS da Sua Empresa!
-      </h1>
-      <p class="text-blue-100 text-lg sm:text-xl mb-4 leading-relaxed max-w-2xl">
-        Descubra como sua indústria pode reduzir custos e impulsionar o crescimento com o principal incentivo fiscal de Goiás.
-      </p>
-      <p class="text-blue-200 text-base mb-10 leading-relaxed max-w-2xl">
-        Cansado da alta carga tributária e da burocracia? O ProGoiás oferece otimização fiscal com segurança jurídica e processos 100% digitais.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4">
-        <a href="#simulator" class="inline-flex items-center justify-center gap-2 bg-gold hover:bg-amber-500 text-white font-heading font-bold text-base px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl">
-          <i data-lucide="calculator" class="w-5 h-5"></i>Simule Sua Economia Agora!
-        </a>
-        <a href="#about" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium px-8 py-4 rounded-xl transition-all">
-          <i data-lucide="info" class="w-5 h-5"></i>Saiba Mais
-        </a>
+        <button id="menuBtn" class="md:hidden text-white p-1"><i data-lucide="menu" class="w-6 h-6"></i></button>
       </div>
     </div>
-  </div>
-  <!-- Stats bar -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-14 w-full">
-    <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div><div class="text-gold font-heading font-bold text-3xl">67%</div><div class="text-blue-200 text-xs mt-1">Redução Máx. ICMS</div></div>
-      <div><div class="text-gold font-heading font-bold text-3xl">2032</div><div class="text-blue-200 text-xs mt-1">Vigência do Programa</div></div>
-      <div><div class="text-gold font-heading font-bold text-3xl">5+</div><div class="text-blue-200 text-xs mt-1">Setores Beneficiados</div></div>
-      <div><div class="text-gold font-heading font-bold text-3xl">100%</div><div class="text-blue-200 text-xs mt-1">Digital e Simplificado</div></div>
+    <div id="mobileMenu" class="hidden md:hidden bg-navy-dark px-4 pb-4 pt-1">
+      <div class="flex flex-col gap-1">
+        <a href="#funcionalidades" class="text-white/80 py-2.5 text-sm border-b border-white/10"
+          onclick="closeMobileMenu()">Funcionalidades</a>
+        <a href="#para-quem" class="text-white/80 py-2.5 text-sm border-b border-white/10"
+          onclick="closeMobileMenu()">Para Quem É</a>
+        <a href="#como-funciona" class="text-white/80 py-2.5 text-sm border-b border-white/10"
+          onclick="closeMobileMenu()">Como Funciona</a>
+        <a href="#planos" class="text-white/80 py-2.5 text-sm border-b border-white/10"
+          onclick="closeMobileMenu()">Planos</a>
+        <a href="#faq" class="text-white/80 py-2.5 text-sm" onclick="closeMobileMenu()">FAQ</a>
+        <a href="#planos" class="mt-2 bg-teal text-white px-4 py-3 rounded-xl text-center text-sm font-semibold"
+          onclick="closeMobileMenu()">Começar Agora</a>
+      </div>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- PROBLEM / OPPORTUNITY -->
-<section id="about" class="py-20 bg-light">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-      <div class="flex flex-col gap-4">
-        <div class="bg-white rounded-2xl p-6 border-l-4 border-red-500 shadow-sm">
-          <div class="text-red-600 font-heading font-bold text-xs uppercase tracking-widest mb-3">Cenário Tradicional</div>
-          <ul class="space-y-2.5">
+  <!-- HERO -->
+  <section class="hero-bg min-h-screen flex flex-col justify-center pt-48 md:pt-56 pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-20 -right-20 w-[500px] h-[500px] bg-teal/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 -left-20 w-96 h-96 bg-teal/5 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-3"
+        style="background-image:radial-gradient(#2EC4B6 1px,transparent 1px);background-size:40px 40px;opacity:0.03;">
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="max-w-4xl">
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span
+            class="inline-flex items-center gap-1.5 border border-teal/50 text-teal text-xs font-heading font-semibold px-3 py-1.5 rounded-full">
+            <i data-lucide="star" class="w-3 h-3"></i> Diagnóstico
+          </span>
+          <span
+            class="inline-flex items-center gap-1.5 border border-teal/50 text-teal text-xs font-heading font-semibold px-3 py-1.5 rounded-full">
+            Simulação
+          </span>
+          <span
+            class="inline-flex items-center gap-1.5 bg-teal/20 text-teal text-xs font-heading font-semibold px-3 py-1.5 rounded-full">
+            <i data-lucide="smartphone" class="w-3 h-3"></i> App 100% Digital
+          </span>
+        </div>
+        <h1 class="text-white font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-6">
+          Pare de Pagar<br>ICMS em Excesso.<br><span class="text-teal">O App que Faz a Adesão<br>ao ProGoiás por
+            Você.</span>
+        </h1>
+        <p class="text-blue-100 text-lg mb-2 leading-relaxed max-w-2xl">
+          O <strong class="text-white">ProGoiás Fácil</strong> simplifica cada etapa da adesão ao ProGoiás — do
+          diagnóstico de elegibilidade até o monitoramento do crédito outorgado. <strong class="text-teal">Sem
+            burocracia, sem dor de cabeça.</strong>
+        </p>
+        <p class="text-blue-200/80 text-sm mb-10 leading-relaxed max-w-2xl">
+          Sua empresa tem direito a reduzir até <strong class="text-white">67% do ICMS</strong> com segurança jurídica
+          garantida até 2032. O App ProGoiásFácil garante que você não perca esse benefício.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#planos"
+            class="inline-flex items-center justify-center gap-2 bg-teal hover:bg-teal-dark text-white font-heading font-bold text-base px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-xl">
+            <i data-lucide="rocket" class="w-5 h-5"></i>Começar Agora com Desconto
+          </a>
+          <a href="#como-funciona"
+            class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-all">
+            <i data-lucide="play-circle" class="w-5 h-5"></i>Ver Como Funciona
+          </a>
+        </div>
+        <p class="text-blue-300/60 text-xs mt-4">Sem taxa de setup · Cancele quando quiser · Pagamento 100% seguro</p>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-14 w-full">
+      <div
+        class="bg-white/8 backdrop-blur-sm border border-white/15 rounded-2xl p-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-teal font-heading font-bold text-3xl">67%</div>
+          <div class="text-blue-200 text-xs mt-1">Crédito Outorgado ICMS</div>
+        </div>
+        <div>
+          <div class="text-teal font-heading font-bold text-3xl">2032</div>
+          <div class="text-blue-200 text-xs mt-1">Vigência com Segurança Jurídica</div>
+        </div>
+        <div>
+          <div class="text-teal font-heading font-bold text-3xl">5+</div>
+          <div class="text-blue-200 text-xs mt-1">Setores Elegíveis</div>
+        </div>
+        <div>
+          <div class="text-teal font-heading font-bold text-3xl">100%</div>
+          <div class="text-blue-200 text-xs mt-1">Digital · Rápido · Seguro</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOR / PROBLEMA -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span
+          class="inline-block bg-red-50 text-red-500 font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">O
+          Problema Real</span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Aderir ao ProGoiás Sem o App Certo<br
+            class="hidden sm:block"> É Uma Armadilha Cara</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">A maioria das empresas elegíveis nunca chega a usufruir do
+          benefício — por excesso de burocracia, erros no protocolo e falta de acompanhamento.</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-8 items-stretch">
+        <!-- Sem o app -->
+        <div class="bg-red-50 rounded-2xl p-8 border border-red-100">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
+              <i data-lucide="x-circle" class="w-5 h-5 text-red-500"></i>
+            </div>
+            <h3 class="font-heading font-bold text-red-700 text-lg">Sem o ProGoiás Fácil</h3>
+          </div>
+          <ul class="space-y-3.5">
             <li class="flex items-start gap-3 text-sm text-gray-700">
-              <span class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
-              Alta carga tributária comprometendo o fluxo de caixa
+              <span
+                class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✕</span>
+              Horas perdidas tentando entender a legislação do ProGoiás
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-700">
-              <span class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
-              Burocracia excessiva nos processos fiscais
+              <span
+                class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✕</span>
+              Incerteza se seu CNAE realmente se enquadra no programa
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-700">
-              <span class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
-              Insegurança jurídica dos programas Fomentar/Produzir
+              <span
+                class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✕</span>
+              Documentação errada causando reprovação e atraso no protocolo
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-700">
-              <span class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✕</span>
-              Litígios fiscais e passivos imprevisíveis
+              <span
+                class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✕</span>
+              Sem controle do andamento na Secretaria de Estado da Economia
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <span
+                class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✕</span>
+              Erro na escrituração do crédito outorgado na EFD gerando risco fiscal
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <span
+                class="w-5 h-5 bg-red-100 text-red-500 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✕</span>
+              Sua empresa continua pagando o ICMS cheio — perdendo R$ mil por mês
             </li>
           </ul>
         </div>
-        <div class="bg-white rounded-2xl p-6 border-l-4 border-emerald-500 shadow-sm relative overflow-hidden">
-          <span class="absolute top-3 right-3 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full">A Melhor Escolha</span>
-          <div class="text-emerald-600 font-heading font-bold text-xs uppercase tracking-widest mb-3">Oportunidade ProGoiás</div>
-          <ul class="space-y-2.5">
+        <!-- Com o app -->
+        <div class="bg-teal-light rounded-2xl p-8 border border-teal/20 relative overflow-hidden">
+          <div class="absolute top-4 right-4 bg-teal text-white text-xs font-bold px-3 py-1 rounded-full">A Solução
+          </div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-teal/20 rounded-xl flex items-center justify-center">
+              <i data-lucide="smartphone" class="w-5 h-5 text-teal"></i>
+            </div>
+            <h3 class="font-heading font-bold text-navy text-lg">Com o App ProGoiás Fácil</h3>
+          </div>
+          <ul class="space-y-3.5">
             <li class="flex items-start gap-3 text-sm text-gray-700">
-              <span class="w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
-              Redução de até 67% no ICMS com crédito outorgado
+              <span
+                class="w-5 h-5 bg-teal/20 text-teal rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✓</span>
+              Diagnóstico automático de elegibilidade por CNAE — em segundos
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-700">
-              <span class="w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
-              Desburocratização total — 100% digital
+              <span
+                class="w-5 h-5 bg-teal/20 text-teal rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✓</span>
+              Simulação financeira do potencial de economia antes de aderir
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-700">
-              <span class="w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
-              Segurança jurídica e previsibilidade até 2032
+              <span
+                class="w-5 h-5 bg-teal/20 text-teal rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✓</span>
+              Checklist personalizado de documentos para o seu perfil de empresa
             </li>
             <li class="flex items-start gap-3 text-sm text-gray-700">
-              <span class="w-5 h-5 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">✓</span>
-              Consultoria especializada do início ao fim
+              <span
+                class="w-5 h-5 bg-teal/20 text-teal rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✓</span>
+              Acompanhamento em tempo real do protocolo na Secretaria da Economia
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <span
+                class="w-5 h-5 bg-teal/20 text-teal rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✓</span>
+              Monitoramento do crédito outorgado para conformidade na EFD
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-700">
+              <span
+                class="w-5 h-5 bg-teal/20 text-teal rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">✓</span>
+              Economia de até 67% no ICMS — com segurança jurídica até 2032
             </li>
           </ul>
         </div>
       </div>
-      <div>
-        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4 leading-tight">
-          Sua Empresa Paga <span class="text-red-500">Impostos Demais?</span><br>O ProGoiás é a Solução!
-        </h2>
-        <p class="text-gray-500 text-lg mb-4 leading-relaxed">
-          Entenda os desafios da alta carga tributária e como o novo programa de incentivos fiscais transforma esse cenário.
-        </p>
-        <p class="text-gray-600 leading-relaxed mb-8">
-          A complexidade tributária e a burocracia dos antigos programas (Fomentar/Produzir) geraram insegurança e litígios. O ProGoiás surge como modelo desburocratizado e transparente, oferecendo redução real do ICMS para empresas que investem em Goiás.
-        </p>
-        <a href="#planos" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg">
-          <i data-lucide="trending-up" class="w-5 h-5"></i>Quero Reduzir Meus Impostos!
+      <div class="text-center mt-10">
+        <a href="#planos"
+          class="inline-flex items-center gap-2 bg-teal hover:bg-teal-dark text-white font-heading font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg">
+          <i data-lucide="trending-up" class="w-5 h-5"></i>Quero Aderir ao ProGoiás Agora!
         </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- BENEFITS -->
-<section id="beneficios" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14">
-      <span class="inline-block bg-royal/10 text-royal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">✨ Vantagens Exclusivas</span>
-      <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Por Que o ProGoiás é o Melhor Caminho<br class="hidden sm:block"> para Sua Empresa?</h2>
-      <p class="text-gray-500 text-lg max-w-2xl mx-auto">Conheça as vantagens que transformam a realidade fiscal e operacional do seu negócio.</p>
-    </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="card-hover bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
-        <div class="w-14 h-14 bg-royal/10 rounded-2xl flex items-center justify-center mb-5"><i data-lucide="trending-down" class="w-7 h-7 text-royal"></i></div>
-        <h3 class="font-heading font-bold text-navy text-lg mb-2">Redução de ICMS Substancial</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Crédito outorgado de até 67% sobre o saldo devedor do ICMS, com impacto imediato no fluxo de caixa.</p>
+  <!-- FUNCIONALIDADES DO APP -->
+  <section id="funcionalidades" class="py-20 bg-teal-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span
+          class="inline-block bg-white text-teal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4 shadow-sm">📱
+          Tudo no App</span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">6 Ferramentas que Tornam<br
+            class="hidden sm:block"> a Adesão ao ProGoiás Simples</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">Do diagnóstico à fruição, o App ProGoiásFácil centraliza tudo
+          que sua empresa precisa — sem precisar de consultoria externa cara.</p>
       </div>
-      <div class="card-hover bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
-        <div class="w-14 h-14 bg-royal/10 rounded-2xl flex items-center justify-center mb-5"><i data-lucide="zap" class="w-7 h-7 text-royal"></i></div>
-        <h3 class="font-heading font-bold text-navy text-lg mb-2">Processos Desburocratizados</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Adesão e gestão simplificadas e 100% digitais — sem papelada, sem filas, sem estresse.</p>
-      </div>
-      <div class="card-hover bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
-        <div class="w-14 h-14 bg-royal/10 rounded-2xl flex items-center justify-center mb-5"><i data-lucide="shield-check" class="w-7 h-7 text-royal"></i></div>
-        <h3 class="font-heading font-bold text-navy text-lg mb-2">Segurança Jurídica Total</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Benefícios com prazos fixos e previsíveis de até 2032, eliminando litígios e passivos fiscais.</p>
-      </div>
-      <div class="card-hover bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
-        <div class="w-14 h-14 bg-royal/10 rounded-2xl flex items-center justify-center mb-5"><i data-lucide="percent" class="w-7 h-7 text-royal"></i></div>
-        <h3 class="font-heading font-bold text-navy text-lg mb-2">Alívio no Protege</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Redução significativa da contribuição para o Fundo de Proteção Social do Estado de Goiás.</p>
-      </div>
-      <div class="card-hover bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
-        <div class="w-14 h-14 bg-royal/10 rounded-2xl flex items-center justify-center mb-5"><i data-lucide="building-2" class="w-7 h-7 text-royal"></i></div>
-        <h3 class="font-heading font-bold text-navy text-lg mb-2">Ampla Abrangência Setorial</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Indústrias, agronegócio, tecnologia, comércio atacadista e logística — todos podem se qualificar.</p>
-      </div>
-      <div class="card-hover bg-navy rounded-2xl p-7">
-        <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-5"><i data-lucide="headphones" class="w-7 h-7 text-gold"></i></div>
-        <h3 class="font-heading font-bold text-white text-lg mb-2">Suporte Especializado</h3>
-        <p class="text-blue-200 text-sm leading-relaxed">Consultores experientes do diagnóstico até a manutenção contínua dos benefícios fiscais.</p>
-        <a href="#planos" class="inline-flex items-center gap-1 text-gold text-sm font-semibold mt-4 hover:underline">
-          Ver planos <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-<!-- SIMULATOR -->
-<section id="simulator" class="py-20 bg-light">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <span class="inline-block bg-royal/10 text-royal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">📊 Simulador Gratuito</span>
-      <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Simule Sua Economia no ICMS com o ProGoiás</h2>
-      <p class="text-gray-500 text-lg max-w-2xl mx-auto">Descubra em segundos o potencial de redução de custos. Rápido, fácil e gratuito!</p>
-    </div>
-    <div class="bg-white rounded-3xl shadow-lg overflow-hidden">
-      <div class="grid lg:grid-cols-2">
-        <!-- Form -->
-        <div class="p-8 lg:p-10">
-          <h3 class="font-heading font-bold text-navy text-xl mb-6">Dados da Sua Empresa</h3>
-          <form id="simForm" class="space-y-5" onsubmit="runSimulator(event)">
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1.5">Nome da Empresa</label>
-              <input id="s-empresa" type="text" required placeholder="Ex: Indústria Alpha LTDA"
-                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-royal/30 focus:border-royal transition-all">
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1.5">Faturamento Mensal Médio</label>
-              <input id="s-fat" type="text" required placeholder="R$ 0,00"
-                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-royal/30 focus:border-royal transition-all"
-                oninput="this.value=fmtCurrency(this.value)">
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1.5">ICMS Médio Pago Mensalmente</label>
-              <input id="s-icms" type="text" required placeholder="R$ 0,00"
-                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-royal/30 focus:border-royal transition-all"
-                oninput="this.value=fmtCurrency(this.value)">
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1.5">Setor de Atuação</label>
-              <select id="s-setor"
-                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-royal/30 focus:border-royal transition-all">
-                <option>Indústria de Transformação</option>
-                <option>Agronegócio/Agroindústria</option>
-                <option>Indústria Farmacêutica</option>
-                <option>Tecnologia</option>
-                <option>Comércio Atacadista</option>
-                <option>Transporte/Logística</option>
-                <option>Outros</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1.5">Investimento Planejado em Goiás <span class="text-gray-400">(Opcional)</span></label>
-              <input id="s-invest" type="text" placeholder="R$ 0,00"
-                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-royal/30 focus:border-royal transition-all"
-                oninput="this.value=fmtCurrency(this.value)">
-            </div>
-            <button id="simBtn" type="submit"
-              class="w-full bg-royal hover:bg-navy text-white font-heading font-semibold py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg text-base">
-              Calcular Minha Economia
-            </button>
-          </form>
+        <div class="card-lift bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+          <div class="w-14 h-14 bg-teal-light rounded-2xl flex items-center justify-center mb-5">
+            <i data-lucide="search-check" class="w-7 h-7 text-teal"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Diagnóstico de Elegibilidade</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Informe seu CNAE e o app verifica automaticamente se sua
+            empresa se enquadra no ProGoiás — com a modalidade correta (implantação, ampliação ou revitalização).</p>
         </div>
-        <!-- Result -->
-        <div class="bg-navy p-8 lg:p-10 flex flex-col justify-center">
-          <div id="simEmpty" class="text-center py-8">
-            <div class="w-20 h-20 bg-white/10 rounded-3xl flex items-center justify-center mx-auto mb-5">
-              <i data-lucide="bar-chart-2" class="w-10 h-10 text-gold"></i>
+
+        <div class="card-lift bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+          <div class="w-14 h-14 bg-teal-light rounded-2xl flex items-center justify-center mb-5">
+            <i data-lucide="calculator" class="w-7 h-7 text-teal"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Simulação Financeira</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Calcule em segundos o potencial de economia mensal e anual
+            com o crédito outorgado. Veja o impacto real no seu fluxo de caixa antes de qualquer compromisso.</p>
+        </div>
+
+        <div class="card-lift bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+          <div class="w-14 h-14 bg-teal-light rounded-2xl flex items-center justify-center mb-5">
+            <i data-lucide="folder-check" class="w-7 h-7 text-teal"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Checklist de Documentos</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Lista personalizada de todos os documentos necessários para o
+            seu perfil de empresa. Organize o requerimento eletrônico sem deixar nada para trás e evite reprovações.</p>
+        </div>
+
+        <div class="card-lift bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+          <div class="w-14 h-14 bg-teal-light rounded-2xl flex items-center justify-center mb-5">
+            <i data-lucide="radar" class="w-7 h-7 text-teal"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Acompanhamento do Protocolo</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Monitore em tempo real o andamento do seu requerimento na
+            Secretaria de Estado da Economia. Saiba exatamente em que fase está sua adesão.</p>
+        </div>
+
+        <div class="card-lift bg-white rounded-2xl p-7 shadow-sm border border-gray-100">
+          <div class="w-14 h-14 bg-teal-light rounded-2xl flex items-center justify-center mb-5">
+            <i data-lucide="bar-chart-2" class="w-7 h-7 text-teal"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Monitoramento do Crédito na EFD</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Após a emissão do Termo de Enquadramento, o app orienta a
+            correta aplicação do crédito outorgado na escrituração fiscal digital — sem risco de autuação.</p>
+        </div>
+
+        <div class="card-lift bg-navy rounded-2xl p-7">
+          <div class="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center mb-5">
+            <i data-lucide="message-circle" class="w-7 h-7 text-teal"></i>
+          </div>
+          <h3 class="font-heading font-bold text-white text-lg mb-2">FAQ com 179+ Respostas</h3>
+          <p class="text-blue-200 text-sm leading-relaxed">Base de conhecimento completa sobre o ProGoiás. Tire dúvidas
+            sobre a legislação, CNAEs elegíveis, prazos e procedimentos — sem depender de advogado para cada pergunta.
+          </p>
+          <a href="#planos" class="inline-flex items-center gap-1 text-teal text-sm font-semibold mt-4 hover:underline">
+            Ver planos <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUEM É -->
+  <section id="para-quem" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span
+          class="inline-block bg-teal-light text-teal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">🏭
+          Setores Atendidos</span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Sua Empresa Pode Se Beneficiar<br
+            class="hidden sm:block"> do ProGoiás?</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">O programa atende empresas de múltiplos setores. Veja se o
+          seu segmento está elegível e descubra o quanto você pode economizar.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="sector-card bg-gradient-to-br from-green-50 to-teal-light rounded-2xl p-7 border border-teal/15">
+          <div class="w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center mb-4">
+            <i data-lucide="wheat" class="w-6 h-6 text-green-700"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Agronegócio e Agroindústria</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-3">Processamento de grãos, frigoríficos, laticínios, usinas
+            de etanol, beneficiadoras e indústrias alimentícias. Goiás é o 3º maior produtor agrícola do Brasil.</p>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-teal font-semibold inline-block border border-teal/20">
+            Até 67% de crédito ICMS</div>
+        </div>
+
+        <div class="sector-card bg-gradient-to-br from-blue-50 to-teal-light rounded-2xl p-7 border border-teal/15">
+          <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-4">
+            <i data-lucide="factory" class="w-6 h-6 text-blue-700"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Indústria de Transformação</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-3">Metalurgia, têxtil, química, plásticos, embalagens,
+            móveis e toda indústria que transforma matéria-prima em produto final dentro do estado de Goiás.</p>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-teal font-semibold inline-block border border-teal/20">
+            Até 67% de crédito ICMS</div>
+        </div>
+
+        <div class="sector-card bg-gradient-to-br from-purple-50 to-teal-light rounded-2xl p-7 border border-teal/15">
+          <div class="w-12 h-12 bg-purple-100 rounded-2xl flex items-center justify-center mb-4">
+            <i data-lucide="cpu" class="w-6 h-6 text-purple-700"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Empresas de Tecnologia</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-3">Empresas de TI, software, hardware, data centers e
+            serviços digitais com operações em Goiás podem se qualificar para o incentivo fiscal do ProGoiás.</p>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-teal font-semibold inline-block border border-teal/20">
+            Verificar elegibilidade no app</div>
+        </div>
+
+        <div class="sector-card bg-gradient-to-br from-orange-50 to-teal-light rounded-2xl p-7 border border-teal/15">
+          <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mb-4">
+            <i data-lucide="truck" class="w-6 h-6 text-orange-700"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Transporte e Logística</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-3">Operadores logísticos, armazéns gerais, transportadoras
+            e distribuidoras com atividade industrial ou atacadista em escala. Goiás é hub do Brasil Central.</p>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-teal font-semibold inline-block border border-teal/20">
+            Até 60% de crédito ICMS</div>
+        </div>
+
+        <div class="sector-card bg-gradient-to-br from-teal-50 to-teal-light rounded-2xl p-7 border border-teal/15">
+          <div class="w-12 h-12 bg-teal/20 rounded-2xl flex items-center justify-center mb-4">
+            <i data-lucide="store" class="w-6 h-6 text-teal"></i>
+          </div>
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Comércio Atacadista</h3>
+          <p class="text-gray-600 text-sm leading-relaxed mb-3">Distribuidoras e atacadistas com operações relevantes em
+            Goiás podem acessar o crédito outorgado, reduzindo significativamente a carga de ICMS nas operações.</p>
+          <div class="bg-white rounded-lg px-3 py-2 text-xs text-teal font-semibold inline-block border border-teal/20">
+            Verificar elegibilidade no app</div>
+        </div>
+
+        <!-- CTA card -->
+        <div class="sector-card bg-navy rounded-2xl p-7 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-teal/20 rounded-2xl flex items-center justify-center mb-4">
+              <i data-lucide="help-circle" class="w-6 h-6 text-teal"></i>
             </div>
-            <h3 class="font-heading font-bold text-white text-xl mb-3">Preencha os dados ao lado</h3>
-            <p class="text-blue-300 text-sm leading-relaxed max-w-xs mx-auto">Para obter uma análise personalizada da sua economia tributária em tempo real.</p>
+            <h3 class="font-heading font-bold text-white text-lg mb-2">Não Sabe se Sua Empresa Se Qualifica?</h3>
+            <p class="text-blue-200 text-sm leading-relaxed mb-5">O App ProGoiásFácil faz o diagnóstico automático em
+              segundos. Informe seu CNAE e descubra agora.</p>
           </div>
-          <div id="simLoading" class="hidden text-center py-8">
-            <div class="spinner mx-auto mb-4"></div>
-            <p class="text-blue-300 text-sm">Processando base de dados do ProGoiás...</p>
+          <a href="#planos"
+            class="inline-flex items-center justify-center gap-2 bg-teal hover:bg-teal-dark text-white font-heading font-semibold px-5 py-3 rounded-xl transition-all text-sm">
+            <i data-lucide="search" class="w-4 h-4"></i>Verificar Meu CNAE
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="py-20 bg-teal-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span
+          class="inline-block bg-white text-teal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4 shadow-sm">🗺️
+          Processo Simplificado</span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">5 Etapas para Sua Empresa<br
+            class="hidden sm:block"> Começar a Economizar com o ProGoiás</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">O App ProGoiásFácil guia sua empresa em cada passo — do
+          diagnóstico inicial até a fruição do crédito outorgado na EFD.</p>
+      </div>
+      <div class="max-w-3xl mx-auto">
+        <div class="space-y-0">
+          <div class="relative flex gap-6 pb-10 step-line">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div
+                class="w-12 h-12 bg-teal rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg z-10 relative">
+                1</div>
+            </div>
+            <div class="pt-2">
+              <h3 class="font-heading font-bold text-navy text-xl mb-2">Diagnóstico de Elegibilidade</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Informe seu CNAE, porte e tipo de operação. O App
+                ProGoiásFácil verifica automaticamente se sua empresa se enquadra no ProGoiás e em qual modalidade —
+                implantação, ampliação ou revitalização.</p>
+            </div>
           </div>
-          <div id="simResults" class="hidden">
-            <h3 class="font-heading font-bold text-white text-2xl mb-6">Seu Potencial de Economia</h3>
-            <div class="space-y-3 mb-6">
-              <div class="bg-white/10 rounded-xl p-4">
-                <div class="text-blue-300 text-xs uppercase tracking-wider mb-1">Economia Mensal Estimada</div>
-                <div id="r-mensal" class="text-gold font-heading font-bold text-3xl">—</div>
+          <div class="relative flex gap-6 pb-10 step-line">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div
+                class="w-12 h-12 bg-teal rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg z-10 relative">
+                2</div>
+            </div>
+            <div class="pt-2">
+              <h3 class="font-heading font-bold text-navy text-xl mb-2">Simulação e Planejamento Financeiro</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Calcule o potencial de economia mensal, anual e o ROI do
+                investimento em Goiás. O simulador usa os dados reais do seu ICMS para entregar projeções precisas e
+                confiáveis.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-6 pb-10 step-line">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div
+                class="w-12 h-12 bg-teal rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg z-10 relative">
+                3</div>
+            </div>
+            <div class="pt-2">
+              <h3 class="font-heading font-bold text-navy text-xl mb-2">Organização de Documentos</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">O app gera um checklist personalizado com todos os
+                documentos necessários para o requerimento: dados cadastrais, informações econômico-fiscais dos últimos
+                12 meses e projeto de investimento.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-6 pb-10 step-line">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div
+                class="w-12 h-12 bg-teal rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg z-10 relative">
+                4</div>
+            </div>
+            <div class="pt-2">
+              <h3 class="font-heading font-bold text-navy text-xl mb-2">Protocolo e Acompanhamento</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Acompanhe o requerimento eletrônico na Secretaria de
+                Estado da Economia em tempo real. Receba alertas sobre cada atualização e saiba exatamente quando o
+                Termo de Enquadramento for expedido.</p>
+            </div>
+          </div>
+          <div class="relative flex gap-6">
+            <div class="flex flex-col items-center flex-shrink-0">
+              <div
+                class="w-12 h-12 bg-navy rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg">
+                5</div>
+            </div>
+            <div class="pt-2">
+              <h3 class="font-heading font-bold text-navy text-xl mb-2">Fruição e Monitoramento do Crédito</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Com o Termo de Enquadramento em mãos, o app orienta a
+                aplicação correta do crédito outorgado na sua EFD mensal e monitora a conformidade fiscal para que você
+                mantenha o benefício sem riscos.</p>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <a href="#planos"
+            class="inline-flex items-center gap-2 bg-teal hover:bg-teal-dark text-white font-heading font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg">
+            <i data-lucide="rocket" class="w-5 h-5"></i>Quero Começar Minha Adesão!
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIMULADOR -->
+  <section id="simulator" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span
+          class="inline-block bg-teal-light text-teal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">📊
+          Simulador Gratuito</span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Descubra Agora Quanto<br
+            class="hidden sm:block"> Sua Empresa Pode Economizar</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">Rápido, gratuito e sem compromisso. Veja o impacto real do
+          ProGoiás no seu fluxo de caixa.</p>
+      </div>
+      <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
+        <div class="grid lg:grid-cols-2">
+          <div class="p-8 lg:p-10">
+            <h3 class="font-heading font-bold text-navy text-xl mb-6">Dados da Sua Empresa</h3>
+            <form id="simForm" class="space-y-5" onsubmit="runSimulator(event)">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">Nome da Empresa</label>
+                <input id="s-empresa" type="text" required placeholder="Ex: Indústria Alpha LTDA"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all">
               </div>
-              <div class="bg-white/10 rounded-xl p-4">
-                <div class="text-blue-300 text-xs uppercase tracking-wider mb-1">Economia Anual Estimada</div>
-                <div id="r-anual" class="text-gold font-heading font-bold text-3xl">—</div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">Faturamento Mensal Médio</label>
+                <input id="s-fat" type="text" required placeholder="R$ 0,00"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all"
+                  oninput="this.value=fmtCurrency(this.value)">
               </div>
-              <div id="r-roiBlock" class="hidden bg-white/10 rounded-xl p-4">
-                <div class="text-blue-300 text-xs uppercase tracking-wider mb-1">Potencial de ROI Anual</div>
-                <div id="r-roi" class="text-emerald-400 font-heading font-bold text-3xl">—</div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">ICMS Médio Pago Mensalmente</label>
+                <input id="s-icms" type="text" required placeholder="R$ 0,00"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all"
+                  oninput="this.value=fmtCurrency(this.value)">
               </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">Setor de Atuação</label>
+                <select id="s-setor"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all">
+                  <option>Indústria de Transformação</option>
+                  <option>Agronegócio/Agroindústria</option>
+                  <option>Indústria Farmacêutica</option>
+                  <option>Tecnologia</option>
+                  <option>Comércio Atacadista</option>
+                  <option>Transporte/Logística</option>
+                  <option>Outros</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">Investimento Planejado em Goiás <span
+                    class="text-gray-400">(Opcional)</span></label>
+                <input id="s-invest" type="text" placeholder="R$ 0,00"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all"
+                  oninput="this.value=fmtCurrency(this.value)">
+              </div>
+              <button id="simBtn" type="submit"
+                class="w-full bg-teal hover:bg-teal-dark text-white font-heading font-semibold py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg text-base">
+                Calcular Minha Economia
+              </button>
+            </form>
+          </div>
+          <div class="bg-navy p-8 lg:p-10 flex flex-col justify-center">
+            <div id="simEmpty" class="text-center py-8">
+              <div class="w-20 h-20 bg-white/10 rounded-3xl flex items-center justify-center mx-auto mb-5">
+                <i data-lucide="bar-chart-2" class="w-10 h-10 text-teal"></i>
+              </div>
+              <h3 class="font-heading font-bold text-white text-xl mb-3">Preencha os dados ao lado</h3>
+              <p class="text-blue-300 text-sm leading-relaxed max-w-xs mx-auto">Para obter uma análise personalizada da
+                sua economia tributária com o ProGoiás.</p>
             </div>
-            <div id="leadCapture" class="bg-white/10 rounded-xl p-5">
-              <h4 class="font-heading font-bold text-white mb-1">Receber Relatório Completo</h4>
-              <p class="text-blue-300 text-xs mb-3">Digite seu e-mail para receber a simulação completa.</p>
-              <div class="flex gap-2">
-                <input id="leadEmail" type="email" placeholder="Seu melhor e-mail"
-                  class="flex-1 bg-white/10 border border-white/20 text-white placeholder-blue-400 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-gold">
-                <button onclick="submitLead()" class="bg-gold hover:bg-amber-500 text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors">Enviar</button>
-              </div>
+            <div id="simLoading" class="hidden text-center py-8">
+              <div class="spinner mx-auto mb-4"></div>
+              <p class="text-blue-300 text-sm">Calculando seu potencial com o ProGoiás...</p>
             </div>
-            <div id="leadSuccess" class="hidden bg-emerald-600/20 border border-emerald-500/40 rounded-xl p-5 text-center">
-              <div class="text-3xl mb-2">✓</div>
-              <h4 class="font-heading font-bold text-white mb-1">Enviado com sucesso!</h4>
-              <p class="text-blue-300 text-sm">Nossa equipe entrará em contato em breve.</p>
+            <div id="simResults" class="hidden">
+              <h3 class="font-heading font-bold text-white text-2xl mb-6">Seu Potencial de Economia</h3>
+              <div class="space-y-3 mb-6">
+                <div class="bg-white/10 rounded-xl p-4">
+                  <div class="text-teal-mid text-xs uppercase tracking-wider mb-1">Economia Mensal Estimada</div>
+                  <div id="r-mensal" class="text-teal font-heading font-bold text-3xl">—</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-4">
+                  <div class="text-teal-mid text-xs uppercase tracking-wider mb-1">Economia Anual Estimada</div>
+                  <div id="r-anual" class="text-teal font-heading font-bold text-3xl">—</div>
+                </div>
+                <div id="r-roiBlock" class="hidden bg-white/10 rounded-xl p-4">
+                  <div class="text-teal-mid text-xs uppercase tracking-wider mb-1">Potencial de ROI Anual</div>
+                  <div id="r-roi" class="text-yellow-400 font-heading font-bold text-3xl">—</div>
+                </div>
+              </div>
+              <div id="leadCapture" class="bg-white/10 rounded-xl p-5">
+                <h4 class="font-heading font-bold text-white mb-1">Receber Relatório Completo</h4>
+                <p class="text-blue-300 text-xs mb-3">Digite seu e-mail para receber a simulação detalhada e um
+                  consultor entrará em contato.</p>
+                <div class="flex gap-2">
+                  <input id="leadEmail" type="email" placeholder="Seu melhor e-mail"
+                    class="flex-1 bg-white/10 border border-white/20 text-white placeholder-blue-400 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-teal">
+                  <button onclick="submitLead()"
+                    class="bg-teal hover:bg-teal-dark text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors">Enviar</button>
+                </div>
+              </div>
+              <div id="leadSuccess" class="hidden bg-teal/20 border border-teal/40 rounded-xl p-5 text-center">
+                <div class="text-3xl mb-2">✓</div>
+                <h4 class="font-heading font-bold text-white mb-1">Enviado com sucesso!</h4>
+                <p class="text-blue-300 text-sm">Nossa equipe entrará em contato em breve com o relatório completo.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- HOW IT WORKS -->
-<section id="como-funciona" class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14">
-      <span class="inline-block bg-royal/10 text-royal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">🗺️ Processo Claro</span>
-      <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Sua Jornada para a Economia Fiscal<br class="hidden sm:block"> em 5 Passos Simples</h2>
-      <p class="text-gray-500 text-lg max-w-2xl mx-auto">Processo claro, transparente e focado em resultados para sua empresa.</p>
+  <!-- DEPOIMENTOS -->
+  <section class="py-20 bg-teal-light">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <span
+          class="inline-block bg-white text-teal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4 shadow-sm">⭐
+          Depoimentos</span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Empresas que Aderiram ao ProGoiás<br
+            class="hidden sm:block"> com o App ProGoiásFácil</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">Veja o que nossos clientes dizem sobre como o app simplificou
+          a adesão e os resultados que alcançaram.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="card-lift bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <div class="flex gap-0.5 mb-4">
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+          </div>
+          <p class="text-gray-700 leading-relaxed text-sm mb-6">"Tentamos aderir ao ProGoiás por conta própria e ficamos
+            meses sem avançar. Com o App ProGoiásFácil, em menos de 30 dias tínhamos o Termo de Enquadramento em mãos. A
+            economia de 55% no ICMS foi imediata."</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-11 h-11 bg-teal rounded-full flex items-center justify-center text-white font-heading font-bold flex-shrink-0">
+              J</div>
+            <div>
+              <div class="font-heading font-bold text-navy text-sm">João Silva</div>
+              <div class="text-gray-400 text-xs">Diretor Financeiro · Indústria Alpha</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-lift bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <div class="flex gap-0.5 mb-4">
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+          </div>
+          <p class="text-gray-700 leading-relaxed text-sm mb-6">"O diagnóstico automático do app confirmou nosso
+            enquadramento em segundos. O checklist de documentos foi fundamental para não errarmos nada no protocolo.
+            Hoje economizamos R$ 120 mil por ano em ICMS."</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-11 h-11 bg-navy rounded-full flex items-center justify-center text-white font-heading font-bold flex-shrink-0">
+              M</div>
+            <div>
+              <div class="font-heading font-bold text-navy text-sm">Mariana Costa</div>
+              <div class="text-gray-400 text-xs">CEO · AgroTech Goiás</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-lift bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+          <div class="flex gap-0.5 mb-4">
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+            <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+          </div>
+          <p class="text-gray-700 leading-relaxed text-sm mb-6">"Migrar do Produzir para o ProGoiás parecia impossível.
+            O app me deu clareza em cada etapa. O suporte de especialistas respondeu todas as minhas dúvidas. Segurança
+            jurídica que nosso conselho exigia. Vale cada centavo."</p>
+          <div class="flex items-center gap-3">
+            <div
+              class="w-11 h-11 bg-teal-dark rounded-full flex items-center justify-center text-white font-heading font-bold flex-shrink-0">
+              R</div>
+            <div>
+              <div class="font-heading font-bold text-navy text-sm">Ricardo Alves</div>
+              <div class="text-gray-400 text-xs">CFO · Distribuidora Central GO</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Números -->
+      <div class="bg-navy rounded-2xl p-8 grid sm:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-teal font-heading font-bold text-4xl mb-2">+500</div>
+          <div class="text-blue-300 text-sm">Empresas Beneficiadas</div>
+        </div>
+        <div>
+          <div class="text-teal font-heading font-bold text-4xl mb-2">R$2M+</div>
+          <div class="text-blue-300 text-sm">Economia Gerada em ICMS</div>
+        </div>
+        <div>
+          <div class="text-teal font-heading font-bold text-4xl mb-2">98%</div>
+          <div class="text-blue-300 text-sm">Satisfação dos Clientes</div>
+        </div>
+      </div>
     </div>
-    <div class="max-w-3xl mx-auto">
-      <div class="space-y-0" id="timeline">
+  </section>
 
-        <div class="relative flex gap-6 pb-10 timeline-line">
-          <div class="flex flex-col items-center flex-shrink-0">
-            <div class="w-12 h-12 bg-royal rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg z-10 relative">1</div>
+  <!-- PLANOS -->
+  <section id="planos" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Urgência de preço -->
+      <div
+        class="bg-red-50 border border-red-200 rounded-2xl p-4 flex flex-col sm:flex-row items-center justify-center gap-3 text-center mb-10">
+        <span class="text-red-500 font-heading font-bold text-sm">🚨 DESCONTO ENCERRA EM:</span>
+        <span id="countdown2" class="font-heading font-bold text-red-600 text-xl">23:59:47</span>
+        <span class="text-red-400 text-sm">· Válido apenas para novos assinantes</span>
+      </div>
+      <div class="text-center mb-14">
+        <span
+          class="inline-block bg-teal-light text-teal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">💎
+          Planos e Preços</span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Escolha o Plano e Comece a Aderir<br
+            class="hidden sm:block"> ao ProGoiás Ainda Hoje</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">Acesso completo ao App ProGoiásFácil — diagnóstico,
+          simulação, checklist, acompanhamento e monitoramento.</p>
+      </div>
+      <div id="pricingLoading" class="text-center py-12">
+        <div class="spinner mx-auto mb-4"></div>
+        <p class="text-gray-500 text-sm">Carregando planos...</p>
+      </div>
+      <div id="pricingGrid" class="hidden grid md:grid-cols-3 gap-6 lg:gap-8 items-center">
+
+        <!-- Mensal -->
+        <div class="card-lift bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+          <h3 class="font-heading font-bold text-navy text-xl mb-1">Plano Mensal</h3>
+          <p class="text-gray-400 text-sm mb-5">Ideal para testar. Cancele a qualquer momento.</p>
+          <div class="mb-1">
+            <span class="price-original text-sm">De R$ 197/mês</span>
           </div>
-          <div class="pt-2"><h3 class="font-heading font-bold text-navy text-xl mb-2">Análise de Elegibilidade</h3><p class="text-gray-500 text-sm leading-relaxed">Verificamos se sua empresa se qualifica para o ProGoiás, sem compromisso. Diagnóstico inicial gratuito.</p></div>
+          <div class="flex items-end gap-1 mb-6">
+            <span class="text-gray-400 text-sm">R$</span>
+            <span class="font-heading font-bold text-navy text-5xl">149</span>
+            <span class="text-gray-400 text-sm mb-1">/mês</span>
+          </div>
+          <ul class="space-y-2.5 mb-8 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Diagnóstico de elegibilidade (CNAE)</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Simulação financeira completa</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Checklist de documentos personalizado</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Um
+              Projeto</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>FAQ
+              com 179+ respostas</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Relatórios em PDF</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Suporte por e-mail</li>
+          </ul>
+          <button onclick="checkout('mensal', this)"
+            class="w-full bg-navy hover:bg-navy-dark text-white font-heading font-semibold py-3.5 rounded-xl transition-all text-sm">
+            Assinar Plano Mensal
+          </button>
         </div>
 
-        <div class="relative flex gap-6 pb-10 timeline-line">
-          <div class="flex flex-col items-center flex-shrink-0">
-            <div class="w-12 h-12 bg-royal rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg z-10 relative">2</div>
+        <!-- Semestral — MAIS POPULAR -->
+        <div class="card-lift plan-featured rounded-2xl p-8 shadow-2xl relative">
+          <div class="absolute -top-4 left-0 right-0 flex justify-center">
+            <span class="bg-teal text-white text-xs font-heading font-bold px-5 py-1.5 rounded-full">⭐ Mais
+              Popular</span>
           </div>
-          <div class="pt-2"><h3 class="font-heading font-bold text-navy text-xl mb-2">Diagnóstico Fiscal Detalhado</h3><p class="text-gray-500 text-sm leading-relaxed">Calculamos o potencial exato de economia e o impacto financeiro real para o seu negócio.</p></div>
+          <h3 class="font-heading font-bold text-white text-xl mb-1">Plano Semestral</h3>
+          <p class="text-blue-200 text-sm mb-5">Melhor custo-benefício para o processo ativo de adesão.</p>
+          <div class="mb-1">
+            <span class="text-blue-400 text-sm line-through">De R$ 997/semestre</span>
+          </div>
+          <div class="flex items-end gap-1 mb-1">
+            <span class="text-blue-300 text-sm">R$</span>
+            <span class="font-heading font-bold text-white text-5xl">779</span>
+            <span class="text-blue-300 text-sm mb-1">/semestre</span>
+          </div>
+          <p class="text-teal text-xs font-semibold mb-6">Economia equivalente a 2 meses grátis</p>
+          <ul class="space-y-2.5 mb-8 text-sm text-blue-200">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Tudo
+              do Plano Mensal</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Acesso a consultores especializados</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Até
+              Seis Projetos</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Acompanhamento do protocolo prioritário</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Suporte por WhatsApp no prazo de 24h</li>
+          </ul>
+          <button onclick="checkout('semestral', this)"
+            class="w-full bg-teal hover:bg-teal-dark text-white font-heading font-semibold py-3.5 rounded-xl transition-all text-sm">
+            🚀 Começar Agora
+          </button>
         </div>
 
-        <div class="relative flex gap-6 pb-10 timeline-line">
-          <div class="flex flex-col items-center flex-shrink-0">
-            <div class="w-12 h-12 bg-royal rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg z-10 relative">3</div>
+        <!-- Anual -->
+        <div class="card-lift bg-white rounded-2xl p-8 border border-gray-200 shadow-sm relative">
+          <div class="absolute -top-4 left-0 right-0 flex justify-center">
+            <span class="bg-navy text-white text-xs font-heading font-bold px-5 py-1.5 rounded-full">💰 Melhor
+              Custo-Benefício</span>
           </div>
-          <div class="pt-2"><h3 class="font-heading font-bold text-navy text-xl mb-2">Plano de Ação Personalizado</h3><p class="text-gray-500 text-sm leading-relaxed">Criamos a estratégia ideal para adesão e otimização dos benefícios do ProGoiás.</p></div>
+          <h3 class="font-heading font-bold text-navy text-xl mb-1">Plano Anual</h3>
+          <p class="text-gray-400 text-sm mb-5">Consultoria dedicada e acompanhamento completo por 12 meses.</p>
+          <div class="mb-1">
+            <span class="price-original text-sm">De R$ 1.997/ano</span>
+          </div>
+          <div class="flex items-end gap-1 mb-1">
+            <span class="text-gray-400 text-sm">R$</span>
+            <span class="font-heading font-bold text-navy text-5xl">1.429</span>
+            <span class="text-gray-400 text-sm mb-1">/ano</span>
+          </div>
+          <p class="text-teal text-xs font-semibold mb-6">Economia equivalente a 4 meses grátis</p>
+          <ul class="space-y-2.5 mb-8 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-teal flex-shrink-0"></i>Tudo
+              do Plano Semestral</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Consultoria dedicada mensal</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Múltiplos CNPJs e Projetos</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Suporte por WhatsApp em 4h</li>
+            <li class="flex items-center gap-2"><i data-lucide="check"
+                class="w-4 h-4 text-teal flex-shrink-0"></i>Onboarding personalizado</li>
+          </ul>
+          <button onclick="checkout('anual', this)"
+            class="w-full bg-teal hover:bg-teal-dark text-white font-heading font-semibold py-3.5 rounded-xl transition-all text-sm">
+            Assinar Plano Anual
+          </button>
+        </div>
+      </div>
+      <p class="text-center text-gray-400 text-sm mt-8">🔒 Pagamento 100% seguro via Stripe · Cancele a qualquer momento
+        · Sem multas · Sem taxa de setup</p>
+    </div>
+  </section>
+
+  <!-- GARANTIA -->
+  <section class="py-16 bg-teal-light">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="bg-white rounded-3xl p-10 shadow-sm border border-teal/10">
+        <div
+          class="w-20 h-20 bg-teal-light rounded-full flex items-center justify-center mx-auto mb-6 border-4 border-teal/20">
+          <i data-lucide="shield-check" class="w-10 h-10 text-teal"></i>
+        </div>
+        <h2 class="font-heading font-bold text-navy text-2xl lg:text-3xl mb-4">Sem Riscos para Você</h2>
+        <p class="text-gray-500 text-lg leading-relaxed max-w-2xl mx-auto mb-6">Cancele quando quiser, sem multas ou
+          burocracia. Se o App ProGoiásFácil não simplificar sua adesão ao ProGoiás, você pode encerrar a assinatura a
+          qualquer momento — sem perguntas.</p>
+        <div class="grid sm:grid-cols-3 gap-4 text-left mt-8">
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 bg-teal-light rounded-xl flex items-center justify-center flex-shrink-0">
+              <i data-lucide="x" class="w-4 h-4 text-teal"></i>
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-navy text-sm">Sem taxa de setup</div>
+              <div class="text-gray-400 text-xs mt-0.5">Comece imediatamente</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 bg-teal-light rounded-xl flex items-center justify-center flex-shrink-0">
+              <i data-lucide="calendar-x" class="w-4 h-4 text-teal"></i>
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-navy text-sm">Cancele quando quiser</div>
+              <div class="text-gray-400 text-xs mt-0.5">Sem fidelidade obrigatória</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-9 h-9 bg-teal-light rounded-xl flex items-center justify-center flex-shrink-0">
+              <i data-lucide="lock" class="w-4 h-4 text-teal"></i>
+            </div>
+            <div>
+              <div class="font-heading font-semibold text-navy text-sm">Pagamento seguro</div>
+              <div class="text-gray-400 text-xs mt-0.5">Processado pelo Stripe</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span
+          class="inline-block bg-teal-light text-teal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">❓
+          Perguntas Frequentes</span>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Tire Suas Dúvidas Sobre o App<br
+            class="hidden sm:block"> e a Adesão ao ProGoiás</h2>
+        <p class="text-gray-500 text-lg max-w-2xl mx-auto">Respondemos as perguntas mais comuns para que você tome uma
+          decisão informada.</p>
+      </div>
+      <div class="max-w-3xl mx-auto space-y-3">
+
+        <div class="bg-teal-light rounded-2xl border border-teal/15 overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-teal/5 transition-colors"
+            onclick="toggleFaq(this)">
+            <span>O que é o ProGoiás e como o app me ajuda a aderir?</span>
+            <i data-lucide="plus" class="w-5 h-5 text-teal flex-shrink-0 ml-4 faq-icon"></i>
+          </button>
+          <div class="acc-body">
+            <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">O ProGoiás é o programa de incentivos fiscais
+              de Goiás (Lei nº 20.787/2020) que concede crédito outorgado de até 67% sobre o ICMS. O App ProGoiásFácil
+              simplifica cada etapa da adesão: faz o diagnóstico automático de elegibilidade, organiza os documentos
+              necessários, acompanha o protocolo na Secretaria de Estado da Economia e monitora a correta aplicação do
+              crédito na EFD — tudo em um só lugar, 100% digital.</div>
+          </div>
         </div>
 
-        <div class="relative flex gap-6 pb-10 timeline-line">
-          <div class="flex flex-col items-center flex-shrink-0">
-            <div class="w-12 h-12 bg-royal rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg z-10 relative">4</div>
+        <div class="bg-teal-light rounded-2xl border border-teal/15 overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-teal/5 transition-colors"
+            onclick="toggleFaq(this)">
+            <span>Minha empresa se qualifica para o ProGoiás?</span>
+            <i data-lucide="plus" class="w-5 h-5 text-teal flex-shrink-0 ml-4 faq-icon"></i>
+          </button>
+          <div class="acc-body">
+            <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">Indústrias de transformação, agronegócios e
+              agroindústrias, empresas farmacêuticas, empresas de tecnologia, comércio atacadista e transporte/logística
+              com operação em Goiás podem se qualificar. O App ProGoiásFácil faz o diagnóstico automático com base no
+              seu CNAE e porte — em segundos, sem necessidade de consultor externo.</div>
           </div>
-          <div class="pt-2"><h3 class="font-heading font-bold text-navy text-xl mb-2">Suporte na Implementação</h3><p class="text-gray-500 text-sm leading-relaxed">Acompanhamos todo o processo burocrático e fiscal até a aprovação e ativação dos benefícios.</p></div>
         </div>
 
-        <div class="relative flex gap-6">
-          <div class="flex flex-col items-center flex-shrink-0">
-            <div class="w-12 h-12 bg-emerald-600 rounded-2xl flex items-center justify-center text-white font-heading font-bold text-lg">5</div>
+        <div class="bg-teal-light rounded-2xl border border-teal/15 overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-teal/5 transition-colors"
+            onclick="toggleFaq(this)">
+            <span>Quanto tempo leva para aderir ao ProGoiás com o app?</span>
+            <i data-lucide="plus" class="w-5 h-5 text-teal flex-shrink-0 ml-4 faq-icon"></i>
+          </button>
+          <div class="acc-body">
+            <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">Com o checklist personalizado e o suporte do
+              App ProGoiásFácil, muitas empresas conseguem protocolar o requerimento em dias — e não em meses como
+              costuma ocorrer sem orientação. Após a análise técnica da Secretaria de Estado da Economia e a expedição
+              do Termo de Enquadramento, o crédito pode ser aplicado imediatamente na EFD.</div>
           </div>
-          <div class="pt-2"><h3 class="font-heading font-bold text-navy text-xl mb-2">Monitoramento e Conformidade</h3><p class="text-gray-500 text-sm leading-relaxed">Garantimos que sua empresa mantenha os benefícios e esteja sempre em conformidade fiscal.</p></div>
+        </div>
+
+        <div class="bg-teal-light rounded-2xl border border-teal/15 overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-teal/5 transition-colors"
+            onclick="toggleFaq(this)">
+            <span>Preciso contratar um advogado ou contador além do app?</span>
+            <i data-lucide="plus" class="w-5 h-5 text-teal flex-shrink-0 ml-4 faq-icon"></i>
+          </button>
+          <div class="acc-body">
+            <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">O App ProGoiásFácil foi desenvolvido para que
+              sua equipe interna consiga conduzir o processo de adesão de forma autônoma. Os planos Semestral e Anual
+              incluem ainda acesso a consultores especializados. Para casos mais complexos (múltiplos CNPJs, migração do
+              Fomentar/Produzir), recomendamos o plano Anual com consultoria dedicada.</div>
+          </div>
+        </div>
+
+        <div class="bg-teal-light rounded-2xl border border-teal/15 overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-teal/5 transition-colors"
+            onclick="toggleFaq(this)">
+            <span>O app funciona para empresas que migram do Fomentar/Produzir?</span>
+            <i data-lucide="plus" class="w-5 h-5 text-teal flex-shrink-0 ml-4 faq-icon"></i>
+          </button>
+          <div class="acc-body">
+            <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">Sim. O App ProGoiásFácil possui módulo
+              específico para empresas que migram dos antigos programas Fomentar e Produzir para o ProGoiás. A migração
+              é um processo com etapas distintas e o app orienta cada uma delas, garantindo a segurança jurídica da
+              transição e a manutenção do benefício sem passivos fiscais.</div>
+          </div>
+        </div>
+
+        <div class="bg-teal-light rounded-2xl border border-teal/15 overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-teal/5 transition-colors"
+            onclick="toggleFaq(this)">
+            <span>Qual a diferença entre crédito outorgado e outros tipos de benefício fiscal?</span>
+            <i data-lucide="plus" class="w-5 h-5 text-teal flex-shrink-0 ml-4 faq-icon"></i>
+          </button>
+          <div class="acc-body">
+            <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">O crédito outorgado é aplicado diretamente no
+              saldo devedor do ICMS na escrituração fiscal digital (EFD), reduzindo o imposto a pagar imediatamente —
+              sem necessidade de restituição ou compensação posterior. Isso significa benefício direto no fluxo de
+              caixa, sem riscos de glosa ou autuação quando aplicado corretamente, como orientado pelo app.</div>
+          </div>
+        </div>
+
+        <div class="bg-teal-light rounded-2xl border border-teal/15 overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-teal/5 transition-colors"
+            onclick="toggleFaq(this)">
+            <span>Até quando o ProGoiás está vigente?</span>
+            <i data-lucide="plus" class="w-5 h-5 text-teal flex-shrink-0 ml-4 faq-icon"></i>
+          </button>
+          <div class="acc-body">
+            <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">O ProGoiás tem vigência garantida até 2032, com
+              segurança jurídica respaldada pela Lei nº 20.787/2020 e pela LC Federal 160/2017. Empresas que aderirem
+              agora terão o benefício assegurado pelo prazo estipulado no Termo de Enquadramento — geralmente de 10 a 15
+              anos a partir da data de enquadramento.</div>
+          </div>
+        </div>
+
+        <div class="bg-teal-light rounded-2xl border border-teal/15 overflow-hidden">
+          <button
+            class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-teal/5 transition-colors"
+            onclick="toggleFaq(this)">
+            <span>Como funciona o cancelamento da assinatura do app?</span>
+            <i data-lucide="plus" class="w-5 h-5 text-teal flex-shrink-0 ml-4 faq-icon"></i>
+          </button>
+          <div class="acc-body">
+            <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">Você pode cancelar a assinatura a qualquer
+              momento, diretamente pelo app ou entrando em contato com nosso suporte — sem multas, sem burocracia. O
+              acesso é mantido até o fim do período pago. Para o plano mensal, o cancelamento é efetivo no próximo ciclo
+              de cobrança.</div>
+          </div>
         </div>
 
       </div>
       <div class="text-center mt-10">
-        <a href="#planos" class="inline-flex items-center gap-2 bg-royal hover:bg-navy text-white font-heading font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg">
-          <i data-lucide="rocket" class="w-5 h-5"></i>Comece Sua Jornada Agora!
+        <a href="https://wa.me/5562994554273" target="_blank" rel="noopener"
+          class="inline-flex items-center gap-2 bg-teal hover:bg-teal-dark text-white font-heading font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Ainda Tem Dúvidas? Fale Conosco!
         </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PRICING -->
-<section id="planos" class="py-20 bg-light">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14">
-      <span class="inline-block bg-royal/10 text-royal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">💎 Planos e Preços</span>
-      <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Escolha o Plano Ideal para Sua Empresa</h2>
-      <p class="text-gray-500 text-lg max-w-2xl mx-auto">Ferramentas profissionais de análise, simulação e acompanhamento do ProGoiás.</p>
+  <!-- CTA FINAL -->
+  <section class="cover-bg py-24 relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-20 -right-20 w-[500px] h-[500px] bg-teal/8 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 -left-20 w-96 h-96 bg-teal/5 rounded-full blur-3xl"></div>
+      <div class="absolute inset-0 opacity-3"
+        style="background-image:radial-gradient(#2EC4B6 1px,transparent 1px);background-size:32px 32px;opacity:0.04;">
+      </div>
     </div>
-
-    <div id="pricingLoading" class="text-center py-12">
-      <div class="spinner mx-auto mb-4"></div>
-      <p class="text-gray-500 text-sm">Carregando planos...</p>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <span
+        class="inline-block bg-teal/20 text-teal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-6">Sua
+        Empresa Merece Isso</span>
+      <h2 class="font-heading font-extrabold text-white text-3xl lg:text-5xl leading-tight mb-6">
+        Não Deixe o ICMS<br>Consumir Seu Lucro.<br><span class="text-teal">Adira ao ProGoiás Agora.</span>
+      </h2>
+      <p class="text-blue-200 text-lg leading-relaxed mb-4 max-w-2xl mx-auto">
+        O App ProGoiásFácil está pronto para guiar sua empresa em cada etapa da adesão — do diagnóstico de elegibilidade
+        até a fruição do crédito outorgado na EFD.
+      </p>
+      <p class="text-blue-300/60 text-sm mb-10">Mais de 500 empresas já economizam com o ProGoiás. A sua pode ser a
+        próxima.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#planos"
+          class="inline-flex items-center justify-center gap-2 bg-teal hover:bg-teal-dark text-white font-heading font-bold text-base px-10 py-5 rounded-2xl transition-all hover:-translate-y-1 hover:shadow-xl">
+          <i data-lucide="rocket" class="w-6 h-6"></i>Começar Agora com Desconto
+        </a>
+        <a href="#simulator"
+          class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-heading font-semibold text-base px-10 py-5 rounded-2xl transition-all">
+          <i data-lucide="calculator" class="w-6 h-6"></i>Simular Economia Antes
+        </a>
+      </div>
+      <p class="text-blue-300/40 text-xs mt-6">🔒 Pagamento 100% seguro via Stripe · Sem taxas de setup · Cancele quando
+        quiser</p>
     </div>
+  </section>
 
-    <div id="pricingGrid" class="hidden grid md:grid-cols-3 gap-6 lg:gap-8 items-center">
-
-      <!-- Mensal -->
-      <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
-        <h3 class="font-heading font-bold text-navy text-xl mb-2">Plano Mensal</h3>
-        <p class="text-gray-500 text-sm leading-relaxed mb-6">Acesso completo à plataforma com cobrança mensal. Cancele a qualquer momento, sem multas.</p>
-        <div class="flex items-end gap-1 mb-6">
-          <span class="text-gray-400 text-sm">R$</span>
-          <span class="font-heading font-bold text-navy text-5xl">149</span>
-          <span class="text-gray-400 text-sm mb-1">/mês</span>
+  <!-- FOOTER -->
+  <footer class="bg-navy-dark text-gray-400 pt-14 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <div class="mb-4">
+            <img src="assets/logo-vertical.jpg" alt="Pro Goiás Fácil" class="h-32 w-auto object-contain" style="filter: brightness(1.05);">
+          </div>
+          <p class="text-sm leading-relaxed mb-5">O app que transforma a burocracia do ProGoiás em economia real de
+            ICMS para sua empresa. Adesão digital, rápida e segura.</p>
+          <div class="flex gap-3">
+            <!-- Instagram -->
+            <a href="#" aria-label="Instagram"
+              class="w-9 h-9 bg-white/10 hover:bg-teal rounded-lg flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <!-- TikTok -->
+            <a href="#" aria-label="TikTok"
+              class="w-9 h-9 bg-white/10 hover:bg-teal rounded-lg flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.7a8.18 8.18 0 004.78 1.52V6.78a4.85 4.85 0 01-1.01-.09z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" aria-label="YouTube"
+              class="w-9 h-9 bg-white/10 hover:bg-teal rounded-lg flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="#" aria-label="LinkedIn"
+              class="w-9 h-9 bg-white/10 hover:bg-teal rounded-lg flex items-center justify-center transition-colors">
+              <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+          </div>
         </div>
-        <ul class="space-y-2.5 mb-8 text-sm text-gray-600">
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Diagnóstico de elegibilidade</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Simulação financeira completa</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Chat FAQ com 179+ respostas</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Projetos ilimitados</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Relatórios em PDF</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Suporte por e-mail</li>
-        </ul>
-        <button onclick="checkout('mensal', this)"
-          class="w-full bg-royal hover:bg-navy text-white font-heading font-semibold py-3.5 rounded-xl transition-all text-sm">
-          Assinar Plano Mensal
-        </button>
-      </div>
-
-      <!-- Semestral (featured) -->
-      <div class="card-hover pricing-featured rounded-2xl p-8 shadow-2xl relative">
-        <div class="absolute -top-4 left-0 right-0 flex justify-center">
-          <span class="bg-gold text-white text-xs font-heading font-bold px-5 py-1.5 rounded-full">⭐ Mais Popular</span>
+        <div>
+          <h4 class="font-heading font-bold text-white mb-4">Links Úteis</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#funcionalidades" class="hover:text-white transition-colors">Funcionalidades do App</a></li>
+            <li><a href="#para-quem" class="hover:text-white transition-colors">Para Quem É</a></li>
+            <li><a href="#como-funciona" class="hover:text-white transition-colors">Como Funciona</a></li>
+            <li><a href="#planos" class="hover:text-white transition-colors">Planos e Preços</a></li>
+            <li><a href="#simulator" class="hover:text-white transition-colors">Simulador Gratuito</a></li>
+            <li><a href="#faq" class="hover:text-white transition-colors">Perguntas Frequentes</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Política de Privacidade</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Termos de Uso</a></li>
+          </ul>
         </div>
-        <h3 class="font-heading font-bold text-white text-xl mb-2">Plano Semestral</h3>
-        <p class="text-blue-200 text-sm leading-relaxed mb-6">Economia de 2 meses pagando por 6. O melhor custo-benefício para processo ativo.</p>
-        <div class="flex items-end gap-1 mb-6">
-          <span class="text-blue-300 text-sm">R$</span>
-          <span class="font-heading font-bold text-white text-5xl">779</span>
-          <span class="text-blue-300 text-sm mb-1">/semestre</span>
-        </div>
-        <ul class="space-y-2.5 mb-8 text-sm text-blue-200">
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold flex-shrink-0"></i>Tudo do Plano Mensal</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold flex-shrink-0"></i>Acesso a consultores especializados</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold flex-shrink-0"></i>Análise de viabilidade detalhada</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold flex-shrink-0"></i>Suporte prioritário</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-gold flex-shrink-0"></i>Economia equivalente a 2 meses</li>
-        </ul>
-        <button onclick="checkout('semestral', this)"
-          class="w-full bg-gold hover:bg-amber-500 text-white font-heading font-semibold py-3.5 rounded-xl transition-all text-sm">
-          Assinar Plano Semestral
-        </button>
-      </div>
-
-      <!-- Anual -->
-      <div class="card-hover bg-white rounded-2xl p-8 border border-gray-100 shadow-sm relative">
-        <div class="absolute -top-4 left-0 right-0 flex justify-center">
-          <span class="bg-emerald-600 text-white text-xs font-heading font-bold px-5 py-1.5 rounded-full">💰 Melhor Custo-Benefício</span>
-        </div>
-        <h3 class="font-heading font-bold text-navy text-xl mb-2">Plano Anual</h3>
-        <p class="text-gray-500 text-sm leading-relaxed mb-6">Máxima economia com 12 meses de acesso, consultoria dedicada e SLA de suporte.</p>
-        <div class="flex items-end gap-1 mb-6">
-          <span class="text-gray-400 text-sm">R$</span>
-          <span class="font-heading font-bold text-navy text-5xl">1.429</span>
-          <span class="text-gray-400 text-sm mb-1">/ano</span>
-        </div>
-        <ul class="space-y-2.5 mb-8 text-sm text-gray-600">
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Tudo do Plano Semestral</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Consultoria dedicada mensal</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Múltiplos CNPJs</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>SLA de suporte 4h</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Onboarding personalizado</li>
-          <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-500 flex-shrink-0"></i>Economia equivalente a 4 meses</li>
-        </ul>
-        <button onclick="checkout('anual', this)"
-          class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-semibold py-3.5 rounded-xl transition-all text-sm">
-          Assinar Plano Anual
-        </button>
-      </div>
-
-    </div>
-
-    <p class="text-center text-gray-400 text-sm mt-8">
-      🔒 Pagamento 100% seguro via Stripe · Cancele a qualquer momento · Sem multas
-    </p>
-  </div>
-</section>
-
-<!-- SOCIAL PROOF -->
-<section class="py-20 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-14">
-      <span class="inline-block bg-royal/10 text-royal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">⭐ Depoimentos</span>
-      <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Quem Já Confiou e Colheu Resultados</h2>
-      <p class="text-gray-500 text-lg max-w-2xl mx-auto">O que nossos clientes dizem sobre a transformação que o ProGoiás trouxe para seus negócios.</p>
-    </div>
-    <div class="grid md:grid-cols-2 gap-6 mb-12">
-      <div class="card-hover bg-light rounded-2xl p-8 border border-gray-100">
-        <div class="text-royal text-5xl font-serif leading-none mb-4">"</div>
-        <p class="text-gray-700 leading-relaxed text-base mb-6">Com a consultoria especializada, conseguimos uma redução de 55% no nosso ICMS mensal. O processo foi muito mais simples do que imaginávamos, e o impacto no fluxo de caixa foi imediato. Recomendo!</p>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 bg-royal rounded-full flex items-center justify-center text-white font-heading font-bold text-lg flex-shrink-0">J</div>
-          <div><div class="font-heading font-bold text-navy">João Silva</div><div class="text-gray-500 text-sm">Diretor Financeiro, Indústria Alpha</div></div>
-        </div>
-      </div>
-      <div class="card-hover bg-light rounded-2xl p-8 border border-gray-100">
-        <div class="text-royal text-5xl font-serif leading-none mb-4">"</div>
-        <p class="text-gray-700 leading-relaxed text-base mb-6">A migração do Produzir para o ProGoiás nos trouxe a segurança jurídica que precisávamos para expandir nossas operações no estado sem medo de passivos fiscais futuros.</p>
-        <div class="flex items-center gap-4">
-          <div class="w-12 h-12 bg-emerald-600 rounded-full flex items-center justify-center text-white font-heading font-bold text-lg flex-shrink-0">M</div>
-          <div><div class="font-heading font-bold text-navy">Mariana Costa</div><div class="text-gray-500 text-sm">CEO, AgroTech Goiás</div></div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-navy rounded-2xl p-8 grid sm:grid-cols-3 gap-8 text-center">
-      <div><div class="text-gold font-heading font-bold text-4xl mb-2">+500</div><div class="text-blue-300 text-sm">Empresas Beneficiadas</div></div>
-      <div><div class="text-gold font-heading font-bold text-4xl mb-2">R$2M+</div><div class="text-blue-300 text-sm">Economia Gerada em ICMS</div></div>
-      <div><div class="text-gold font-heading font-bold text-4xl mb-2">98%</div><div class="text-blue-300 text-sm">Satisfação dos Clientes</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="py-20 bg-light">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <span class="inline-block bg-royal/10 text-royal font-heading font-semibold text-sm px-4 py-1.5 rounded-full mb-4">❓ Perguntas Frequentes</span>
-      <h2 class="font-heading font-bold text-3xl lg:text-4xl text-navy mb-4">Dúvidas Comuns Sobre o ProGoiás<br class="hidden sm:block"> e Nossa Consultoria</h2>
-      <p class="text-gray-500 text-lg max-w-2xl mx-auto">Encontre as respostas e tome uma decisão informada.</p>
-    </div>
-    <div class="max-w-3xl mx-auto space-y-3">
-
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-        <button class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
-          <span>O que é o ProGoiás e qual a principal diferença para o Fomentar/Produzir?</span>
-          <i data-lucide="plus" class="w-5 h-5 text-royal flex-shrink-0 ml-4 transition-transform faq-icon"></i>
-        </button>
-        <div class="accordion-body"><div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">O ProGoiás é o novo programa de incentivos fiscais de Goiás, focado em desburocratização e segurança jurídica. A principal diferença é a concessão de crédito outorgado de ICMS de forma mais transparente e com prazos definidos, eliminando as complexidades e litígios dos programas anteriores.</div></div>
-      </div>
-
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-        <button class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
-          <span>Minha empresa se qualifica para o ProGoiás?</span>
-          <i data-lucide="plus" class="w-5 h-5 text-royal flex-shrink-0 ml-4 faq-icon"></i>
-        </button>
-        <div class="accordion-body"><div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">Empresas de diversos setores — indústrias de transformação, agronegócio, tecnologia, comércio atacadista e transporte/logística — podem se qualificar. Nossa consultoria realiza uma análise de elegibilidade detalhada para confirmar o enquadramento.</div></div>
-      </div>
-
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-        <button class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
-          <span>Qual o valor mínimo de investimento para aderir ao ProGoiás?</span>
-          <i data-lucide="plus" class="w-5 h-5 text-royal flex-shrink-0 ml-4 faq-icon"></i>
-        </button>
-        <div class="accordion-body"><div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">O programa exige um investimento mínimo em Goiás, que varia conforme o porte e o setor da empresa. Nosso simulador e consultoria inicial podem ajudar a determinar os requisitos específicos para o seu caso.</div></div>
-      </div>
-
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-        <button class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
-          <span>Quanto tempo leva para minha empresa começar a usufruir dos benefícios?</span>
-          <i data-lucide="plus" class="w-5 h-5 text-royal flex-shrink-0 ml-4 faq-icon"></i>
-        </button>
-        <div class="accordion-body"><div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">O tempo varia conforme a complexidade do caso e a agilidade na documentação. Com nossa consultoria, agilizamos o processo para que sua empresa comece a economizar o mais rápido possível.</div></div>
-      </div>
-
-      <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
-        <button class="w-full flex items-center justify-between p-6 text-left font-heading font-semibold text-navy text-sm hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
-          <span>Como funciona a consultoria após a simulação?</span>
-          <i data-lucide="plus" class="w-5 h-5 text-royal flex-shrink-0 ml-4 faq-icon"></i>
-        </button>
-        <div class="accordion-body"><div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">Após a simulação e o envio do seu e-mail, entraremos em contato para uma análise aprofundada, um diagnóstico fiscal completo e a elaboração de um plano de ação personalizado para a adesão ao ProGoiás.</div></div>
-      </div>
-
-    </div>
-    <div class="text-center mt-10">
-      <a href="mailto:contato@bi4you.com.br" class="inline-flex items-center gap-2 bg-royal hover:bg-navy text-white font-heading font-semibold px-8 py-4 rounded-xl transition-all hover:-translate-y-0.5">
-        <i data-lucide="mail" class="w-5 h-5"></i>Ainda Tem Dúvidas? Fale Conosco!
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="py-24 hero-bg relative overflow-hidden">
-  <div class="absolute inset-0 overflow-hidden">
-    <div class="absolute -top-20 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 -left-20 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl"></div>
-  </div>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-    <div class="text-gold text-5xl mb-6 leading-none">↓</div>
-    <h2 class="font-heading font-extrabold text-white text-3xl lg:text-5xl mb-6 leading-tight">
-      Não Deixe Seu Dinheiro na Mesa.<br>Comece a Economizar Agora!
-    </h2>
-    <p class="text-blue-100 text-xl mb-4 leading-relaxed">O futuro financeiro da sua empresa começa com uma decisão inteligente.</p>
-    <p class="text-blue-200 mb-10 leading-relaxed max-w-2xl mx-auto">
-      Centenas de empresas já se beneficiam do ProGoiás. Sua empresa pode ser a próxima. Use o simulador ou assine um plano e comece hoje.
-    </p>
-    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-      <a href="#simulator" class="inline-flex items-center justify-center gap-2 bg-gold hover:bg-amber-500 text-white font-heading font-bold text-base px-10 py-5 rounded-2xl transition-all hover:-translate-y-1 hover:shadow-2xl">
-        <i data-lucide="calculator" class="w-6 h-6"></i>Simule Sua Economia Agora!
-      </a>
-      <a href="#planos" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-heading font-semibold text-base px-10 py-5 rounded-2xl transition-all">
-        <i data-lucide="credit-card" class="w-6 h-6"></i>Ver Planos e Preços
-      </a>
-    </div>
-    <p class="text-blue-300 text-sm mt-8">🔒 Pagamento 100% seguro via Stripe · Cancele quando quiser · Sem burocracia</p>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-gray-900 text-gray-400 pt-14 pb-8">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-3 gap-10 mb-12">
-      <div>
-        <div class="flex items-center gap-2 mb-4">
-          <div class="w-9 h-9 bg-gold rounded-xl flex items-center justify-center"><span class="text-white font-bold text-sm">PG</span></div>
-          <span class="font-heading font-bold text-xl text-white">ProGoiás</span>
-        </div>
-        <p class="text-sm leading-relaxed mb-5">Sua parceira estratégica em otimização fiscal e incentivos do ProGoiás. Consultoria especializada para empresas goianas.</p>
-        <div class="flex gap-3">
-          <a href="#" class="w-9 h-9 bg-white/10 hover:bg-royal rounded-lg flex items-center justify-center transition-colors"><i data-lucide="linkedin" class="w-4 h-4 text-white"></i></a>
-          <a href="#" class="w-9 h-9 bg-white/10 hover:bg-royal rounded-lg flex items-center justify-center transition-colors"><i data-lucide="facebook" class="w-4 h-4 text-white"></i></a>
-          <a href="#" class="w-9 h-9 bg-white/10 hover:bg-royal rounded-lg flex items-center justify-center transition-colors"><i data-lucide="instagram" class="w-4 h-4 text-white"></i></a>
+        <div>
+          <h4 class="font-heading font-bold text-white mb-4">Contato</h4>
+          <div class="space-y-3 text-sm">
+            <div class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-teal flex-shrink-0"></i>
+              <a href="mailto:contato@bi4you.com.br"
+                class="hover:text-white transition-colors">suporte@jornadaprogoias.com.br</a>
+            </div>
+            <a href="https://wa.me/5562994554273" target="_blank" rel="noopener"
+              class="flex items-center gap-2 hover:text-white transition-colors">
+              <svg class="w-4 h-4 text-teal flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+              WhatsApp
+            </a>
+            <div class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-4 h-4 text-teal flex-shrink-0"></i>
+              <span>Goiânia, GO</span>
+            </div>
+          </div>
+          <div class="mt-6 bg-white/5 rounded-xl p-4 border border-white/10">
+            <div class="flex items-center gap-2 mb-1">
+              <i data-lucide="shield-check" class="w-4 h-4 text-teal"></i>
+              <span class="text-white text-xs font-semibold">Respaldo Jurídico</span>
+            </div>
+            <p class="text-xs leading-relaxed">Lei nº 20.787/2020 · LC Federal 160/2017 · Vigência até 2032</p>
+          </div>
         </div>
       </div>
-      <div>
-        <h4 class="font-heading font-bold text-white mb-4">Links Úteis</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="#" class="hover:text-white transition-colors">Política de Privacidade</a></li>
-          <li><a href="#" class="hover:text-white transition-colors">Termos de Uso</a></li>
-          <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
-          <li><a href="#planos" class="hover:text-white transition-colors">Planos e Preços</a></li>
-          <li><a href="#simulator" class="hover:text-white transition-colors">Simulador Gratuito</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="font-heading font-bold text-white mb-4">Contato</h4>
-        <div class="space-y-3 text-sm">
-          <div class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-royal flex-shrink-0"></i><a href="mailto:contato@bi4you.com.br" class="hover:text-white transition-colors">contato@bi4you.com.br</a></div>
-          <div class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-royal flex-shrink-0"></i><span>(62) 99999-9999</span></div>
-          <div class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-royal flex-shrink-0"></i><span>Goiânia, GO</span></div>
-        </div>
+      <div class="border-t border-white/10 pt-6 text-center text-xs leading-relaxed">
+        BI 4YOU CONSULTORIA EM TI LTDA &nbsp;·&nbsp; CNPJ 04.114.922/0001-68 &nbsp;·&nbsp; &copy; 2026 &nbsp;·&nbsp; Todos os direitos reservados.
       </div>
     </div>
-    <div class="border-t border-white/10 pt-6 text-center text-xs">
-      &copy; 2026 Bi4YOU Consultoria. Todos os direitos reservados.
-    </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  // ── Config ──────────────────────────────────────────────────────
-  const CONFIG = {
-    API_BASE: 'http://localhost:3001/api',
-  };
+  <script>
+    const STRIPE_LINKS = {
+      mensal: 'https://buy.stripe.com/test_fZu3cxd5U94xaK6b3i3Nm00',
+      semestral: 'https://buy.stripe.com/test_aFa5kFgi65Sl2dA4EU3Nm01',
+      anual: 'https://buy.stripe.com/test_aFa28te9YeoR3hE9Ze3Nm02',
+    };
 
-  // ── Icons init ──────────────────────────────────────────────────
-  lucide.createIcons();
+    lucide.createIcons();
 
-  // ── Navbar scroll ───────────────────────────────────────────────
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add('nav-solid');
-    } else {
-      navbar.classList.remove('nav-solid');
-    }
-  });
+    // Scroll nav solid
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('nav-solid', window.scrollY > 60);
+    });
 
-  // ── Mobile menu ─────────────────────────────────────────────────
-  document.getElementById('menuBtn').addEventListener('click', () => {
-    document.getElementById('mobileMenu').classList.toggle('hidden');
-  });
-  function closeMobileMenu() {
-    document.getElementById('mobileMenu').classList.add('hidden');
-  }
+    // Mobile menu
+    document.getElementById('menuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+    function closeMobileMenu() { document.getElementById('mobileMenu').classList.add('hidden'); }
 
-  // ── Currency formatter ───────────────────────────────────────────
-  function fmtCurrency(value) {
-    const raw = value.replace(/\D/g, '');
-    if (!raw) return '';
-    const num = parseFloat(raw) / 100;
-    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(num);
-  }
-
-  function parseCurrency(str) {
-    return parseFloat((str || '').replace(/[R$\s.]/g, '').replace(',', '.')) || 0;
-  }
-
-  function fmtBRL(val) {
-    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
-  }
-
-  // ── Simulator ───────────────────────────────────────────────────
-  function runSimulator(e) {
-    e.preventDefault();
-    const icms   = parseCurrency(document.getElementById('s-icms').value);
-    const invest = parseCurrency(document.getElementById('s-invest').value);
-
-    document.getElementById('simEmpty').classList.add('hidden');
-    document.getElementById('simResults').classList.add('hidden');
-    document.getElementById('simLoading').classList.remove('hidden');
-
-    const btn = document.getElementById('simBtn');
-    btn.disabled = true;
-    btn.textContent = 'Calculando...';
-
-    setTimeout(() => {
-      const mensal = icms * 0.60;
-      const anual  = mensal * 12;
-
-      document.getElementById('r-mensal').textContent = fmtBRL(mensal);
-      document.getElementById('r-anual').textContent  = fmtBRL(anual);
-
-      if (invest > 0 && anual > 0) {
-        document.getElementById('r-roi').textContent = ((anual / invest) * 100).toFixed(0) + '%';
-        document.getElementById('r-roiBlock').classList.remove('hidden');
-      } else {
-        document.getElementById('r-roiBlock').classList.add('hidden');
+    // Countdown — ends at midnight tonight
+    function startCountdown() {
+      function tick() {
+        const now = new Date();
+        const end = new Date(now);
+        end.setHours(23, 59, 59, 0);
+        const diff = Math.max(0, Math.floor((end - now) / 1000));
+        const h = String(Math.floor(diff / 3600)).padStart(2, '0');
+        const m = String(Math.floor((diff % 3600) / 60)).padStart(2, '0');
+        const s = String(diff % 60).padStart(2, '0');
+        const val = `${h}:${m}:${s}`;
+        const c1 = document.getElementById('countdown');
+        const c2 = document.getElementById('countdown2');
+        if (c1) c1.textContent = val;
+        if (c2) c2.textContent = val;
+        document.querySelectorAll('.countdown-clone').forEach(el => el.textContent = val);
       }
+      tick();
+      setInterval(tick, 1000);
+    }
+    startCountdown();
 
-      document.getElementById('simLoading').classList.add('hidden');
-      document.getElementById('simResults').classList.remove('hidden');
-      document.getElementById('leadCapture').classList.remove('hidden');
-      document.getElementById('leadSuccess').classList.add('hidden');
+    // Currency formatter
+    function fmtCurrency(v) {
+      const n = v.replace(/\D/g, '');
+      if (!n) return '';
+      return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(parseFloat(n) / 100);
+    }
+    function parseCurrency(s) { return parseFloat((s || '').replace(/[R$\s.]/g, '').replace(',', '.')) || 0; }
+    function fmtBRL(v) { return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v); }
 
-      btn.disabled = false;
-      btn.textContent = 'Calcular Minha Economia';
+    // Simulator
+    function runSimulator(e) {
+      e.preventDefault();
+      const icms = parseCurrency(document.getElementById('s-icms').value);
+      const invest = parseCurrency(document.getElementById('s-invest').value);
+      const btn = document.getElementById('simBtn');
 
-      lucide.createIcons();
-    }, 1200);
-  }
+      document.getElementById('simEmpty').classList.add('hidden');
+      document.getElementById('simResults').classList.add('hidden');
+      document.getElementById('simLoading').classList.remove('hidden');
+      btn.disabled = true; btn.textContent = 'Calculando...';
 
-  function submitLead() {
-    const email = document.getElementById('leadEmail').value.trim();
-    if (!email) return;
-    console.log('Lead capturado:', email);
-    document.getElementById('leadCapture').classList.add('hidden');
-    document.getElementById('leadSuccess').classList.remove('hidden');
-  }
+      setTimeout(() => {
+        const mensal = icms * 0.60, anual = mensal * 12;
+        document.getElementById('r-mensal').textContent = fmtBRL(mensal);
+        document.getElementById('r-anual').textContent = fmtBRL(anual);
+        if (invest > 0 && anual > 0) {
+          document.getElementById('r-roi').textContent = ((anual / invest) * 100).toFixed(0) + '%';
+          document.getElementById('r-roiBlock').classList.remove('hidden');
+        } else {
+          document.getElementById('r-roiBlock').classList.add('hidden');
+        }
+        document.getElementById('simLoading').classList.add('hidden');
+        document.getElementById('simResults').classList.remove('hidden');
+        document.getElementById('leadCapture').classList.remove('hidden');
+        document.getElementById('leadSuccess').classList.add('hidden');
+        btn.disabled = false; btn.textContent = 'Calcular Minha Economia';
+        lucide.createIcons();
+      }, 1200);
+    }
 
-  // ── Pricing / Stripe ────────────────────────────────────────────
-  async function initPricing() {
-    try {
-      const res = await fetch(`${CONFIG.API_BASE}/stripe/plans`);
-      if (!res.ok) throw new Error('API indisponível');
-      const { plans } = await res.json();
-      if (!plans || plans.length === 0) throw new Error('sem planos');
-      // API returned plans — could update UI dynamically here if needed
-    } catch (_) {
-      // fallback: use hardcoded HTML plans (already rendered)
-    } finally {
+    function submitLead() {
+      const e = (document.getElementById('leadEmail').value || '').trim();
+      if (!e) return;
+      console.log('Lead:', e);
+      document.getElementById('leadCapture').classList.add('hidden');
+      document.getElementById('leadSuccess').classList.remove('hidden');
+    }
+
+    // Pricing
+    function initPricing() {
       document.getElementById('pricingLoading').classList.add('hidden');
       document.getElementById('pricingGrid').classList.remove('hidden');
       lucide.createIcons();
     }
-  }
 
-  async function checkout(slug, btn) {
-    const original = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = 'Redirecionando...';
-    try {
-      const res = await fetch(`${CONFIG.API_BASE}/stripe/checkout/public`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ plan_slug: slug }),
-      });
-      if (!res.ok) throw new Error('Erro ao iniciar checkout');
-      const { checkout_url } = await res.json();
-      window.location.href = checkout_url;
-    } catch (err) {
-      console.error(err);
-      alert('Não foi possível iniciar o checkout. Tente novamente em instantes.');
-      btn.disabled = false;
-      btn.textContent = original;
+    function checkout(slug, btn) {
+      const url = STRIPE_LINKS[slug];
+      if (!url) return;
+      btn.disabled = true;
+      btn.textContent = 'Redirecionando...';
+      window.location.href = url;
     }
-  }
 
-  // ── FAQ Accordion ───────────────────────────────────────────────
-  function toggleFaq(btn) {
-    const body = btn.nextElementSibling;
-    const icon = btn.querySelector('.faq-icon');
-    const isOpen = body.classList.contains('open');
-
-    document.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
-    document.querySelectorAll('.faq-icon').forEach(i => i.setAttribute('data-lucide', 'plus'));
-    lucide.createIcons();
-
-    if (!isOpen) {
-      body.classList.add('open');
-      icon.setAttribute('data-lucide', 'minus');
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const body = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+      const isOpen = body.classList.contains('open');
+      document.querySelectorAll('.acc-body').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.faq-icon').forEach(i => i.setAttribute('data-lucide', 'plus'));
       lucide.createIcons();
+      if (!isOpen) {
+        body.classList.add('open');
+        icon.setAttribute('data-lucide', 'minus');
+        lucide.createIcons();
+      }
     }
-  }
 
-  // ── Bootstrap ───────────────────────────────────────────────────
-  initPricing();
-</script>
+    initPricing();
+  </script>
 </body>
+
 </html>
