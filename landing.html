@@ -709,6 +709,29 @@
                   class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all">
               </div>
               <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1.5">CNPJ</label>
+                <input id="s-cnpj" type="text" required placeholder="00.000.000/0000-00" inputmode="numeric"
+                  maxlength="18" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}"
+                  title="Informe um CNPJ válido no formato 00.000.000/0000-00"
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all"
+                  oninput="this.value=fmtCNPJ(this.value)">
+              </div>
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">E-mail</label>
+                  <input id="s-email" type="email" required placeholder="seuemail@empresa.com.br"
+                    class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all">
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-1.5">Telefone Contato</label>
+                  <input id="s-telefone" type="tel" required placeholder="(00) 00000-0000" inputmode="numeric"
+                    maxlength="15" pattern="\(\d{2}\)\s\d{4,5}-\d{4}"
+                    title="Informe um telefone válido no formato (00) 00000-0000"
+                    class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all"
+                    oninput="this.value=fmtPhone(this.value)">
+                </div>
+              </div>
+              <div>
                 <label class="block text-sm font-medium text-gray-700 mb-1.5">Faturamento Mensal Médio</label>
                 <input id="s-fat" type="text" required placeholder="R$ 0,00"
                   class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal/30 focus:border-teal transition-all"
@@ -775,21 +798,20 @@
                   <div id="r-roi" class="text-yellow-400 font-heading font-bold text-3xl">—</div>
                 </div>
               </div>
-              <div id="leadCapture" class="bg-white/10 rounded-xl p-5">
-                <h4 class="font-heading font-bold text-white mb-1">Receber Relatório Completo</h4>
-                <p class="text-blue-300 text-xs mb-3">Digite seu e-mail para receber a simulação detalhada e um
-                  consultor entrará em contato.</p>
-                <div class="flex gap-2">
-                  <input id="leadEmail" type="email" placeholder="Seu melhor e-mail"
-                    class="flex-1 bg-white/10 border border-white/20 text-white placeholder-blue-400 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-teal">
-                  <button onclick="submitLead()"
-                    class="bg-teal hover:bg-teal-dark text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors">Enviar</button>
-                </div>
+              <div id="leadSending" class="bg-white/10 rounded-xl p-5 text-center">
+                <div class="spinner mx-auto mb-3" style="width:24px;height:24px;border-width:3px;"></div>
+                <p class="text-blue-300 text-xs">Enviando seus dados para nossa equipe...</p>
               </div>
               <div id="leadSuccess" class="hidden bg-teal/20 border border-teal/40 rounded-xl p-5 text-center">
                 <div class="text-3xl mb-2">✓</div>
-                <h4 class="font-heading font-bold text-white mb-1">Enviado com sucesso!</h4>
+                <h4 class="font-heading font-bold text-white mb-1">Dados enviados com sucesso!</h4>
                 <p class="text-blue-300 text-sm">Nossa equipe entrará em contato em breve com o relatório completo.</p>
+              </div>
+              <div id="leadError" class="hidden bg-red-500/10 border border-red-400/30 rounded-xl p-5 text-center">
+                <p class="text-blue-100 text-sm mb-3">Não foi possível enviar automaticamente.</p>
+                <a id="leadErrorMailto" href="#"
+                  class="inline-flex items-center gap-2 bg-teal hover:bg-teal-dark text-white px-4 py-2.5 rounded-lg text-sm font-semibold transition-colors">Enviar
+                  por e-mail</a>
               </div>
             </div>
           </div>
@@ -1352,9 +1374,9 @@
 
   <script>
     const STRIPE_LINKS = {
-      mensal: 'https://buy.stripe.com/test_fZu3cxd5U94xaK6b3i3Nm00',
-      semestral: 'https://buy.stripe.com/test_aFa5kFgi65Sl2dA4EU3Nm01',
-      anual: 'https://buy.stripe.com/test_aFa28te9YeoR3hE9Ze3Nm02',
+      mensal: 'https://buy.stripe.com/bJedR88fS2uLbFt2mT8EM02',
+      semestral: 'https://buy.stripe.com/aFabJ0ao0glBcJxf9F8EM01',
+      anual: 'https://buy.stripe.com/bJedR8ao0fhx10P6D98EM00',
     };
 
     lucide.createIcons();
@@ -1401,6 +1423,73 @@
     function parseCurrency(s) { return parseFloat((s || '').replace(/[R$\s.]/g, '').replace(',', '.')) || 0; }
     function fmtBRL(v) { return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v); }
 
+    // CNPJ formatter — 00.000.000/0000-00
+    function fmtCNPJ(v) {
+      const d = v.replace(/\D/g, '').slice(0, 14);
+      let out = d;
+      if (d.length > 2) out = d.slice(0, 2) + '.' + d.slice(2);
+      if (d.length > 5) out = d.slice(0, 2) + '.' + d.slice(2, 5) + '.' + d.slice(5);
+      if (d.length > 8) out = d.slice(0, 2) + '.' + d.slice(2, 5) + '.' + d.slice(5, 8) + '/' + d.slice(8);
+      if (d.length > 12) out = d.slice(0, 2) + '.' + d.slice(2, 5) + '.' + d.slice(5, 8) + '/' + d.slice(8, 12) + '-' + d.slice(12);
+      return out;
+    }
+
+    // Phone formatter — (00) 00000-0000 or (00) 0000-0000
+    function fmtPhone(v) {
+      const d = v.replace(/\D/g, '').slice(0, 11);
+      let out = d;
+      if (d.length > 0) out = '(' + d;
+      if (d.length > 2) out = '(' + d.slice(0, 2) + ') ' + d.slice(2);
+      if (d.length > 6 && d.length <= 10) out = '(' + d.slice(0, 2) + ') ' + d.slice(2, 6) + '-' + d.slice(6);
+      if (d.length > 10) out = '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7);
+      return out;
+    }
+
+    // Captures ad campaign attribution from the URL so leads can be segmented
+    // by channel (Google Ads, Instagram, Facebook Ads, LinkedIn, YouTube) later.
+    function getUtmParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        'Origem (utm_source)': params.get('utm_source') || '(direto)',
+        'Mídia (utm_medium)': params.get('utm_medium') || '(direto)',
+        'Campanha (utm_campaign)': params.get('utm_campaign') || '-',
+        'Conteúdo (utm_content)': params.get('utm_content') || '-',
+        'Termo (utm_term)': params.get('utm_term') || '-',
+      };
+    }
+
+    const LEAD_ENDPOINT = 'https://formspree.io/f/xaqrqkgw';
+
+    async function sendLeadToFormspree(data) {
+      const sending = document.getElementById('leadSending');
+      const success = document.getElementById('leadSuccess');
+      const error = document.getElementById('leadError');
+      sending.classList.remove('hidden');
+      success.classList.add('hidden');
+      error.classList.add('hidden');
+
+      try {
+        const res = await fetch(LEAD_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (!res.ok) throw new Error('Formspree respondeu com erro');
+        sending.classList.add('hidden');
+        success.classList.remove('hidden');
+      } catch (err) {
+        console.error('Falha ao enviar lead:', err);
+        sending.classList.add('hidden');
+        error.classList.remove('hidden');
+        const subject = encodeURIComponent(`Nova simulação ProGoiásFácil — ${data['Nome da Empresa']}`);
+        const body = encodeURIComponent(Object.entries(data)
+          .filter(([k]) => !k.startsWith('_'))
+          .map(([k, v]) => `${k}: ${v}`).join('\n'));
+        document.getElementById('leadErrorMailto').href =
+          `mailto:suporte@jornadaprogoias.com.br?subject=${subject}&body=${body}`;
+      }
+    }
+
     // Simulator
     function runSimulator(e) {
       e.preventDefault();
@@ -1415,29 +1504,41 @@
 
       setTimeout(() => {
         const mensal = icms * 0.60, anual = mensal * 12;
+        const roiPct = (invest > 0 && anual > 0) ? ((anual / invest) * 100).toFixed(0) + '%' : '-';
         document.getElementById('r-mensal').textContent = fmtBRL(mensal);
         document.getElementById('r-anual').textContent = fmtBRL(anual);
         if (invest > 0 && anual > 0) {
-          document.getElementById('r-roi').textContent = ((anual / invest) * 100).toFixed(0) + '%';
+          document.getElementById('r-roi').textContent = roiPct;
           document.getElementById('r-roiBlock').classList.remove('hidden');
         } else {
           document.getElementById('r-roiBlock').classList.add('hidden');
         }
         document.getElementById('simLoading').classList.add('hidden');
         document.getElementById('simResults').classList.remove('hidden');
-        document.getElementById('leadCapture').classList.remove('hidden');
-        document.getElementById('leadSuccess').classList.add('hidden');
         btn.disabled = false; btn.textContent = 'Calcular Minha Economia';
         lucide.createIcons();
-      }, 1200);
-    }
 
-    function submitLead() {
-      const e = (document.getElementById('leadEmail').value || '').trim();
-      if (!e) return;
-      console.log('Lead:', e);
-      document.getElementById('leadCapture').classList.add('hidden');
-      document.getElementById('leadSuccess').classList.remove('hidden');
+        const empresa = document.getElementById('s-empresa').value.trim();
+        const email = document.getElementById('s-email').value.trim();
+        sendLeadToFormspree({
+          _subject: `Nova simulação ProGoiásFácil — ${empresa}`,
+          _replyto: email,
+          'Nome da Empresa': empresa,
+          'CNPJ': document.getElementById('s-cnpj').value.trim(),
+          'E-mail': email,
+          'Telefone': document.getElementById('s-telefone').value.trim(),
+          'Setor de Atuação': document.getElementById('s-setor').value,
+          'Faturamento Mensal Médio': document.getElementById('s-fat').value,
+          'ICMS Médio Pago Mensalmente': document.getElementById('s-icms').value,
+          'Investimento Planejado em Goiás': document.getElementById('s-invest').value || '-',
+          'Economia Mensal Estimada': fmtBRL(mensal),
+          'Economia Anual Estimada': fmtBRL(anual),
+          'ROI Anual Estimado': roiPct,
+          ...getUtmParams(),
+          'Página de Origem': window.location.href,
+          'Data/Hora do Envio': new Date().toLocaleString('pt-BR'),
+        });
+      }, 1200);
     }
 
     // Pricing
