@@ -1,0 +1,1599 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1062837612752099');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sobre o ProGoiás Fácil — A Esteira Digital do Benefício Fiscal | Bi 4You</title>
+  <meta name="description"
+    content="Descubra como o ProGoiás Fácil une software SaaS exclusivo e consultoria tributária de ponta para reduzir até 64% do ICMS devido até 2032 para pequenas, médias e grandes indústrias em Goiás.">
+  <meta name="keywords"
+    content="ProGoiás, ProGoiás Fácil, Bi 4You, incentivo fiscal Goiás, redução ICMS, crédito outorgado, benefício fiscal indústrias">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ProGoiás Fácil • A Esteira Digital Completa do ProGoiás">
+  <meta property="og:description"
+    content="Reduza até 64% do ICMS devido até 2032. Saiba como o ProGoiás Fácil transforma o compliance tributário em lucro real.">
+  <meta property="og:image" content="assets/sobre/slide-11-crescimento-grafico.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#070C14',
+            'obsidian-card': '#0D1624',
+            'obsidian-card-hover': '#132034',
+            'obsidian-light': '#121F33',
+            mint: {
+              300: '#5EEAD4',
+              400: '#2DD4BF',
+              DEFAULT: '#00F0A8',
+              glow: '#00F0A8',
+              dark: '#00BF82',
+            },
+            cyan: {
+              400: '#38BDF8',
+              DEFAULT: '#00D4FF',
+              dark: '#0284C7',
+            },
+            warning: '#F59E0B',
+            danger: '#EF4444'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow-mint': '0 0 35px -5px rgba(0, 240, 168, 0.35)',
+            'glow-cyan': '0 0 35px -5px rgba(0, 212, 255, 0.35)',
+            'glow-card': '0 10px 40px -10px rgba(0, 0, 0, 0.7)',
+            'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Gamma/Modern Hub Styling */
+    :root {
+      --mint-glow: #00F0A8;
+      --cyan-glow: #00D4FF;
+    }
+
+    body {
+      background-color: #070C14;
+      color: #E2E8F0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* Ambient Background Gradients */
+    .bg-ambient-grid {
+      background-image: radial-gradient(rgba(0, 240, 168, 0.08) 1px, transparent 1px),
+        radial-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+      background-size: 40px 40px;
+      background-position: 0 0, 20px 20px;
+    }
+
+    .glow-sphere-1 {
+      position: absolute;
+      top: -100px;
+      left: 20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(0, 240, 168, 0.15) 0%, rgba(0, 240, 168, 0) 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glow-sphere-2 {
+      position: absolute;
+      top: 40%;
+      right: -150px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(0, 212, 255, 0.12) 0%, rgba(0, 212, 255, 0) 70%);
+      filter: blur(90px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glass-nav {
+      background: rgba(7, 12, 20, 0.75);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-card {
+      background: rgba(13, 22, 36, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(0, 240, 168, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px -10px rgba(0, 240, 168, 0.15);
+    }
+
+    .glass-card-active {
+      border-color: #00F0A8;
+      background: rgba(18, 32, 52, 0.85);
+      box-shadow: 0 0 30px rgba(0, 240, 168, 0.2);
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      border-radius: 9999px;
+      background: rgba(0, 240, 168, 0.1);
+      border: 1px solid rgba(0, 240, 168, 0.3);
+      color: #00F0A8;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .badge-pill-cyan {
+      background: rgba(0, 212, 255, 0.1);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      color: #00D4FF;
+    }
+
+    .btn-mint {
+      background: linear-gradient(135deg, #00F0A8 0%, #00D287 100%);
+      color: #06110D;
+      font-weight: 800;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 25px rgba(0, 240, 168, 0.3);
+    }
+
+    .btn-mint:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 35px rgba(0, 240, 168, 0.5);
+      background: linear-gradient(135deg, #38FFBC 0%, #00E594 100%);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #FFFFFF;
+      transition: all 0.25s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Gradient Text */
+    .text-gradient-mint {
+      background: linear-gradient(135deg, #FFFFFF 20%, #00F0A8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-gradient-cyan {
+      background: linear-gradient(135deg, #00F0A8 0%, #00D4FF 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Modal / Lightbox */
+    .lightbox-modal {
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .lightbox-modal.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .lightbox-modal:not(.hidden) {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      animation: whatsapp-pulse 2.2s infinite;
+    }
+
+    @keyframes whatsapp-pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, .55);
+      }
+      70% {
+        box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-ambient-grid text-slate-200 antialiased selection:bg-mint selection:text-black">
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1062837612752099&ev=PageView&noscript=1" alt="" /></noscript>
+
+  <!-- Glow Elements -->
+  <div class="glow-sphere-1"></div>
+  <div class="glow-sphere-2"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-obsidian via-emerald-950/60 to-obsidian border-b border-mint/20 py-2 px-4 text-xs text-center font-medium">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
+      <span class="inline-flex items-center gap-1.5 bg-mint/20 text-mint font-bold px-2 py-0.5 rounded-full text-[11px] border border-mint/30">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> VIGÊNCIA ATÉ 2032
+      </span>
+      <span>ProGoiás não é apenas para grandes corporações: Pequenas e Médias indústrias garantem até 64% de redução no ICMS.</span>
+      <a href="simulador.html" class="text-mint font-bold hover:underline inline-flex items-center gap-1 ml-1">
+        Simular agora <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Glass Header -->
+  <header class="sticky top-0 z-50 glass-nav transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="landing.html" class="flex items-center gap-3 group">
+        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-mint/20 to-cyan/20 border border-mint/40 flex items-center justify-center text-mint font-bold shadow-glow-mint transition-transform group-hover:scale-105">
+          <i data-lucide="layers" class="w-5 h-5"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-lg text-white tracking-tight flex items-center gap-1.5">
+            ProGoiás Fácil <span class="text-mint text-xs px-1.5 py-0.5 rounded bg-mint/10 border border-mint/30 font-sans">SaaS</span>
+          </span>
+          <span class="text-[11px] text-slate-400 -mt-1 font-medium">Uma solução Bi 4You Consultoria</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#jornada" class="hover:text-mint transition-colors flex items-center gap-1.5">
+          <i data-lucide="git-commit" class="w-4 h-4 text-mint"></i> 8 Etapas
+        </a>
+        <a href="#plataforma" class="hover:text-mint transition-colors flex items-center gap-1.5">
+          <i data-lucide="cpu" class="w-4 h-4 text-cyan"></i> O Que o SaaS Faz
+        </a>
+        <a href="#mitos" class="hover:text-mint transition-colors flex items-center gap-1.5">
+          <i data-lucide="help-circle" class="w-4 h-4 text-warning"></i> Mitos & PMEs
+        </a>
+        <a href="#comparativo" class="hover:text-mint transition-colors flex items-center gap-1.5">
+          <i data-lucide="bar-chart-3" class="w-4 h-4 text-mint"></i> Comparativo
+        </a>
+        <a href="#galeria" class="hover:text-mint transition-colors flex items-center gap-1.5">
+          <i data-lucide="images" class="w-4 h-4 text-slate-400"></i> Lâminas
+        </a>
+        <a href="#planos" class="hover:text-mint transition-colors flex items-center gap-1.5">
+          <i data-lucide="tag" class="w-4 h-4 text-mint"></i> Serviço e Preço
+        </a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="landing.html" class="text-xs text-slate-300 hover:text-white px-3 py-2 rounded-lg hover:bg-white/5 transition-all">
+          Página Inicial
+        </a>
+        <a href="simulador.html" class="btn-mint text-xs uppercase tracking-wider py-2.5 px-5 rounded-xl inline-flex items-center gap-2">
+          <span>Simulação Gratuita</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg bg-white/5 text-slate-200 hover:text-mint border border-white/10" aria-label="Abrir Menu">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="hidden md:hidden border-b border-white/10 bg-obsidian/95 px-6 py-6 space-y-4">
+      <a href="#jornada" class="block text-slate-200 hover:text-mint text-base font-medium py-1" onclick="toggleMobileMenu()">8 Etapas da Esteira</a>
+      <a href="#plataforma" class="block text-slate-200 hover:text-mint text-base font-medium py-1" onclick="toggleMobileMenu()">Tudo na Plataforma</a>
+      <a href="#mitos" class="block text-slate-200 hover:text-mint text-base font-medium py-1" onclick="toggleMobileMenu()">Mitos e Sinais</a>
+      <a href="#comparativo" class="block text-slate-200 hover:text-mint text-base font-medium py-1" onclick="toggleMobileMenu()">Comparativo vs. Tradicional</a>
+      <a href="#galeria" class="block text-slate-200 hover:text-mint text-base font-medium py-1" onclick="toggleMobileMenu()">Lâminas do Folder</a>
+      <a href="#planos" class="block text-mint hover:text-white text-base font-medium py-1" onclick="toggleMobileMenu()">Serviço e Preço</a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="simulador.html" class="btn-mint text-center py-3 rounded-xl text-sm font-bold">
+          Faça sua Simulação Gratuita ↗
+        </a>
+        <a href="https://wa.me/5562994554273" target="_blank" class="btn-secondary text-center py-3 rounded-xl text-sm font-semibold flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i> Falar com Especialista
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO SECTION: Impacto & Conversão
+  =========================================== -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <div class="inline-flex items-center gap-2 badge-pill">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-mint"></i>
+            CONSULTORIA BI 4YOU APRESENTA • SAAS TRIBUTÁRIO
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight tracking-tight">
+            Reduza até <span class="text-gradient-cyan">64% do ICMS devido</span> até 2032 e garanta mais lucro no seu caixa.
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal">
+            No cenário atual, continuar pagando imposto em excesso corrói sua margem de lucro e coloca a sustentabilidade da empresa em risco. O <strong class="text-white font-semibold">ProGoiás Fácil</strong> é a esteira digital completa da <span class="text-mint">Bi 4You</span> que conduz pequenas, médias e grandes empresas do diagnóstico inicial à economia real — com tecnologia própria, acompanhamento 24h e segurança jurídica total.
+          </p>
+
+          <!-- Badges Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            <div class="glass-card p-3 rounded-xl text-center">
+              <span class="text-mint font-extrabold text-lg block">Até 64%</span>
+              <span class="text-[11px] text-slate-400 font-medium">Crédito Outorgado</span>
+            </div>
+            <div class="glass-card p-3 rounded-xl text-center">
+              <span class="text-cyan font-extrabold text-lg block">Até 2032</span>
+              <span class="text-[11px] text-slate-400 font-medium">Vigência Garantida</span>
+            </div>
+            <div class="glass-card p-3 rounded-xl text-center">
+              <span class="text-white font-extrabold text-lg block">PMEs & Grandes</span>
+              <span class="text-[11px] text-slate-400 font-medium">Sem Restrição de Porte</span>
+            </div>
+            <div class="glass-card p-3 rounded-xl text-center">
+              <span class="text-mint font-extrabold text-lg block">8 Etapas</span>
+              <span class="text-[11px] text-slate-400 font-medium">Esteira Digital 24/7</span>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+            <a href="simulador.html" class="btn-mint text-center py-4 px-8 rounded-xl text-base font-extrabold flex items-center justify-center gap-3">
+              <span>FAÇA SUA SIMULAÇÃO GRATUITA</span>
+              <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+            </a>
+            <a href="#jornada" class="btn-secondary text-center py-4 px-6 rounded-xl text-base font-semibold flex items-center justify-center gap-2">
+              <span>Como Funciona a Jornada</span>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400"></i>
+            </a>
+          </div>
+
+          <!-- Trust Subtext -->
+          <div class="flex items-center gap-4 pt-2 text-xs text-slate-400">
+            <span class="flex items-center gap-1 text-mint">
+              <i data-lucide="check-circle-2" class="w-4 h-4"></i> Diagnóstico 100% gratuito
+            </span>
+            <span class="flex items-center gap-1">
+              <i data-lucide="lock" class="w-4 h-4 text-cyan"></i> Sem taxa de setup inicial
+            </span>
+            <span class="flex items-center gap-1">
+              <i data-lucide="clock" class="w-4 h-4"></i> Resultado em minutos
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Right Hero Visual / Interactive Card -->
+        <div class="lg:col-span-5">
+          <div class="relative group">
+            
+            <!-- Outer Glow Frame -->
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-mint/40 via-cyan/30 to-mint/20 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-1000"></div>
+
+            <!-- Card Interface -->
+            <div class="relative glass-card rounded-2xl p-6 border border-white/15 bg-obsidian-card/90 shadow-2xl space-y-5">
+              
+              <!-- Card Header -->
+              <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                  <span class="text-xs text-slate-400 font-mono ml-2">app.progoiasfacil.com.br</span>
+                </div>
+                <span class="badge-pill !py-0.5 !px-2 !text-[10px]">
+                  AO VIVO
+                </span>
+              </div>
+
+              <!-- Main Hero Image Showcase -->
+              <div class="relative rounded-xl overflow-hidden border border-white/10 group cursor-pointer" onclick="openLightbox('assets/sobre/slide-11-crescimento-grafico.jpg', 'ProGoiás: O Salto de Competitividade e Redução Tributária')">
+                <img src="assets/sobre/slide-11-crescimento-grafico.jpg" alt="Gráfico de Crescimento ProGoiás Fácil" class="w-full h-56 object-cover object-top transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80"></div>
+                
+                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                  <div>
+                    <span class="text-[10px] text-mint uppercase font-bold tracking-wider">Crescimento Comprovado</span>
+                    <h3 class="text-sm font-bold text-white leading-tight">ProGoiás: Multiplique seu poder de caixa</h3>
+                  </div>
+                  <span class="p-2 bg-obsidian/80 rounded-lg text-white border border-white/20 hover:bg-mint hover:text-black transition-colors">
+                    <i data-lucide="maximize-2" class="w-4 h-4"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Simulated Quick Stats -->
+              <div class="space-y-3">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-slate-400">Economia média apurada:</span>
+                  <span class="text-mint font-bold text-sm">Até R$ 640.000 / a cada R$ 1M de ICMS</span>
+                </div>
+                <div class="w-full bg-white/5 rounded-full h-2 overflow-hidden">
+                  <div class="bg-gradient-to-r from-mint to-cyan h-2 rounded-full w-[64%]"></div>
+                </div>
+                <div class="flex items-center justify-between text-[11px] text-slate-400">
+                  <span>Incentivo ProGoiás (Até 64%)</span>
+                  <span>Recolhimento Restante (36%)</span>
+                </div>
+              </div>
+
+              <!-- Instant Teaser Box -->
+              <div class="p-3.5 rounded-xl bg-mint/5 border border-mint/20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-mint/20 text-mint flex items-center justify-center">
+                    <i data-lucide="calculator" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs font-bold text-white">Descubra seu número exato</p>
+                    <p class="text-[11px] text-slate-400">Simulação gratuita sem compromisso</p>
+                  </div>
+                </div>
+                <a href="simulador.html" class="text-xs text-mint font-bold hover:underline">
+                  Calcular ↗
+                </a>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       VIDEO: Veja o ProGoiás Fácil na Prática
+  =========================================== -->
+  <section class="pb-20 md:pb-28 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <div class="badge-pill inline-flex mb-6">
+        <i data-lucide="play-circle" class="w-3.5 h-3.5 text-mint"></i>
+        VEJA NA PRÁTICA
+      </div>
+      <h2 class="font-display text-2xl sm:text-3xl font-extrabold text-white mb-8">
+        Como o <span class="text-gradient-mint">ProGoiás Fácil</span> funciona na prática
+      </h2>
+      <div class="relative group">
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-mint/40 via-cyan/30 to-mint/20 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-1000"></div>
+        <div class="relative rounded-2xl overflow-hidden border border-white/15 shadow-2xl" style="padding-top:56.25%;">
+          <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/q1BhYTjqVag?rel=0"
+            title="ProGoiás Fácil" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <p class="text-slate-400 text-xs mt-4">Descubra como a esteira digital conduz sua empresa do diagnóstico
+        inicial à economia real.</p>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 2: O Problema Real & Contraste
+       (O Jeito Antigo vs. Bi 4You + ProGoiás Fácil)
+  =========================================== -->
+  <section id="comparativo" class="py-20 border-t border-white/10 relative bg-obsidian-card/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="badge-pill">
+          <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-warning"></i>
+          O PROBLEMA REAL
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Pare de pagar ICMS em excesso.<br>
+          <span class="text-gradient-cyan">O seu negócio não pode sangrar caixa.</span>
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed">
+          A maioria das empresas elegíveis em Goiás nunca chega a usufruir do benefício fiscal — <strong class="text-white">não por falta de direito, mas por falta de processo</strong>. No modelo tradicional, a lentidão e a desorganização custam fortunas todos os meses.
+        </p>
+      </div>
+
+      <!-- The 3 Pain Points of Traditional Consultancies -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-red-500 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center">
+            <i data-lucide="mail-x" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">E-mail, WhatsApp e Planilha</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Cada documento em uma pasta diferente, sem rastreabilidade. Informações fiscais vitais perdidas a cada troca de mensagem e equipe sem padrão.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-yellow-500 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center">
+            <i data-lucide="help-circle" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Falta Total de Visibilidade</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            <em>"Como está meu processo?"</em> — A pergunta que nenhuma consultoria tradicional responde sem uma ligação, reunião ou dias de espera.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border-l-4 border-l-red-600 space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-red-600/10 text-red-500 flex items-center justify-center">
+            <i data-lucide="shield-alert" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Risco Real de Falha e Autuação</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Documentação incompleta, cálculo equivocado de créditos e processos que desistem ou são indeferidos por mera falta de acompanhamento técnico.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Comparison Matrix (Folder Page 3) -->
+      <div class="glass-card rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+        <div class="px-6 py-5 bg-white/5 border-b border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h3 class="font-display font-bold text-xl text-white">Consultoria Tradicional vs. Bi 4You + ProGoiás Fácil</h3>
+            <p class="text-xs text-slate-400">A combinação definitiva: Tecnologia de ponta + Consultoria humana especializada</p>
+          </div>
+          <span class="badge-pill !text-xs self-start sm:self-auto">
+            A VIRADA DEFINITIVA
+          </span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-white/10 bg-obsidian/60 text-xs uppercase tracking-wider text-slate-400">
+                <th class="py-4 px-6 font-semibold">Critério</th>
+                <th class="py-4 px-6 font-semibold text-red-400/90">Consultoria Tradicional</th>
+                <th class="py-4 px-6 font-semibold text-mint">Bi 4You + ProGoiás Fácil</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="py-4 px-6 font-medium text-white flex items-center gap-2">
+                  <i data-lucide="activity" class="w-4 h-4 text-slate-400"></i> Status do processo
+                </td>
+                <td class="py-4 px-6 text-slate-400">
+                  <span class="text-red-400 font-medium">Preciso ligar</span> para saber onde o processo está
+                </td>
+                <td class="py-4 px-6 text-mint font-semibold flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4"></i> Vejo em tempo real, 24h por dia na plataforma
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="py-4 px-6 font-medium text-white flex items-center gap-2">
+                  <i data-lucide="folder" class="w-4 h-4 text-slate-400"></i> Gestão de Documentos
+                </td>
+                <td class="py-4 px-6 text-slate-400">
+                  Pastas soltas por e-mail, perda de arquivos e retrabalho
+                </td>
+                <td class="py-4 px-6 text-mint font-semibold flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4"></i> Checklist guiado e repositório digital centralizado
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="py-4 px-6 font-medium text-white flex items-center gap-2">
+                  <i data-lucide="file-text" class="w-4 h-4 text-slate-400"></i> Relatórios Técnicos
+                </td>
+                <td class="py-4 px-6 text-slate-400">
+                  Feitos manualmente sob encomenda, demorados e com risco de erro
+                </td>
+                <td class="py-4 px-6 text-mint font-semibold flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4"></i> Gerados automaticamente, padronizados no formato oficial
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="py-4 px-6 font-medium text-white flex items-center gap-2">
+                  <i data-lucide="calculator" class="w-4 h-4 text-slate-400"></i> Cálculo da Economia
+                </td>
+                <td class="py-4 px-6 text-slate-400">
+                  Estimativas genéricas, sem memória de cálculo transparente
+                </td>
+                <td class="py-4 px-6 text-mint font-semibold flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4"></i> Simulação personalizada com números reais da sua escrituração
+                </td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="py-4 px-6 font-medium text-white flex items-center gap-2">
+                  <i data-lucide="bell" class="w-4 h-4 text-slate-400"></i> Comunicação e Alertas
+                </td>
+                <td class="py-4 px-6 text-slate-400">
+                  Mensagens avulsas de WhatsApp e telefonemas quando dá tempo
+                </td>
+                <td class="py-4 px-6 text-mint font-semibold flex items-center gap-2">
+                  <i data-lucide="check" class="w-4 h-4"></i> Central de notificações automáticas por e-mail e na tela
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Callout inside comparison -->
+        <div class="p-6 bg-gradient-to-r from-mint/10 via-obsidian to-cyan/10 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="space-y-1 text-center sm:text-left">
+            <h4 class="font-bold text-white flex items-center gap-2 justify-center sm:justify-start">
+              <i data-lucide="sparkles" class="w-4 h-4 text-mint"></i> Tecnologia própria + Consultoria humana:
+            </h4>
+            <p class="text-xs text-slate-300">
+              Não é só um software frio. Não é só consultoria manual. Especialistas tributários sêniores atuam onde exige julgamento; o software garante velocidade e precisão.
+            </p>
+          </div>
+          <a href="simulador.html" class="btn-mint whitespace-nowrap text-xs py-2.5 px-5 rounded-xl">
+            Iniciar Simulação ↗
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 3: A Jornada Digital em 8 Etapas
+       (Conteúdo Completo da Página 4 do Folder)
+  =========================================== -->
+  <section id="jornada" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Title -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="badge-pill">
+          <i data-lucide="git-merge" class="w-3.5 h-3.5 text-mint"></i>
+          ESTEIRA PROGOIÁS FÁCIL
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Como funciona a jornada dentro da plataforma
+        </h2>
+        <p class="text-slate-300 text-base">
+          <strong class="text-mint">8 etapas acompanhadas</strong> do diagnóstico inicial ao crédito aplicado no caixa — cada uma visível, registrada e notificada automaticamente, sem "buraco negro" de informação.
+        </p>
+      </div>
+
+      <!-- 3 Key Value Props on Top of Timeline -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        
+        <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-mint/10 text-mint flex-shrink-0 flex items-center justify-center shadow-glow-mint">
+            <i data-lucide="monitor" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-sm">Painel em tempo real</h4>
+            <p class="text-xs text-slate-400 mt-0.5">Acompanhamento 24h, atualizado a cada mudança de etapa.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan/10 text-cyan flex-shrink-0 flex items-center justify-center shadow-glow-cyan">
+            <i data-lucide="bell-ring" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-sm">Notificações automáticas</h4>
+            <p class="text-xs text-slate-400 mt-0.5">Alertas por e-mail e dentro da plataforma a cada avanço.</p>
+          </div>
+        </div>
+
+        <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex-shrink-0 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="font-bold text-white text-sm">Rastreabilidade total</h4>
+            <p class="text-xs text-slate-400 mt-0.5">Histórico completo de cada ação e documento — nada perdido.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- The 8 Steps Grid / Interactive Stepper -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="glass-card p-6 rounded-2xl relative group hover:border-mint transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-9 h-9 rounded-xl bg-mint text-obsidian font-extrabold flex items-center justify-center text-sm shadow-glow-mint">
+              1
+            </span>
+            <span class="text-[10px] text-mint uppercase font-bold tracking-wider">Passo Inicial</span>
+          </div>
+          <h3 class="text-base font-bold text-white group-hover:text-mint transition-colors">
+            Diagnóstico de Viabilidade
+          </h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Descubra em minutos se sua empresa é elegível e quanto exatamente pode economizar de ICMS todos os meses.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Duração estimada:</span>
+            <span class="text-mint font-semibold">Minutos</span>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="glass-card p-6 rounded-2xl relative group hover:border-mint transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-9 h-9 rounded-xl bg-mint text-obsidian font-extrabold flex items-center justify-center text-sm shadow-glow-mint">
+              2
+            </span>
+            <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Compliance</span>
+          </div>
+          <h3 class="text-base font-bold text-white group-hover:text-mint transition-colors">
+            Organização da Documentação
+          </h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Checklist automático e guiado pela plataforma, sem risco de esquecer nenhuma certidão ou documento fiscal exigido.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Método:</span>
+            <span class="text-cyan font-semibold">Checklist Guiado</span>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="glass-card p-6 rounded-2xl relative group hover:border-mint transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-9 h-9 rounded-xl bg-mint text-obsidian font-extrabold flex items-center justify-center text-sm shadow-glow-mint">
+              3
+            </span>
+            <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Protocolo</span>
+          </div>
+          <h3 class="text-base font-bold text-white group-hover:text-mint transition-colors">
+            Envio do Requerimento
+          </h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Submissão formal acompanhada com rigor dentro da plataforma, com registro de prazos e números de protocolo.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Rastreio:</span>
+            <span class="text-mint font-semibold">Automático</span>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="glass-card p-6 rounded-2xl relative group hover:border-mint transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-9 h-9 rounded-xl bg-mint text-obsidian font-extrabold flex items-center justify-center text-sm shadow-glow-mint">
+              4
+            </span>
+            <span class="text-[10px] text-cyan uppercase font-bold tracking-wider">Dossiê Técnico</span>
+          </div>
+          <h3 class="text-base font-bold text-white group-hover:text-mint transition-colors">
+            Projeto de Viabilidade Econômica
+          </h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Relatório técnico gerado automaticamente pelo sistema, rigorosamente no padrão exigido pelo Governo do Estado e SEFAZ.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Padrão:</span>
+            <span class="text-cyan font-semibold">SEFAZ / SIC</span>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="glass-card p-6 rounded-2xl relative group hover:border-mint transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-9 h-9 rounded-xl bg-mint text-obsidian font-extrabold flex items-center justify-center text-sm shadow-glow-mint">
+              5
+            </span>
+            <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Auditoria</span>
+          </div>
+          <h3 class="text-base font-bold text-white group-hover:text-mint transition-colors">
+            Análise de Regularidade Fiscal
+          </h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Checagem minuciosa de certidões e pendências fiscais antes de avançar, impedindo bloqueios ou indeferimentos desnecessários.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Objetivo:</span>
+            <span class="text-warning font-semibold">Zero Pendências</span>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="glass-card p-6 rounded-2xl relative group hover:border-mint transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-9 h-9 rounded-xl bg-mint text-obsidian font-extrabold flex items-center justify-center text-sm shadow-glow-mint">
+              6
+            </span>
+            <span class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Governo</span>
+          </div>
+          <h3 class="text-base font-bold text-white group-hover:text-mint transition-colors">
+            Aprovação
+          </h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Acompanhamento em tempo real da análise e deliberação do órgão estadual, com intervenção rápida em caso de exigências.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Visibilidade:</span>
+            <span class="text-mint font-semibold">Notificação Push</span>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="glass-card p-6 rounded-2xl relative group hover:border-mint transition-all border-mint/40">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-9 h-9 rounded-xl bg-mint text-obsidian font-extrabold flex items-center justify-center text-sm shadow-glow-mint">
+              7
+            </span>
+            <span class="text-[10px] text-mint uppercase font-bold tracking-wider">Marco Jurídico</span>
+          </div>
+          <h3 class="text-base font-bold text-white group-hover:text-mint transition-colors">
+            Termo de Adesão
+          </h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            O documento oficial que garante a fruição do benefício de até 64% de redução até 2032, arquivado com segurança na plataforma.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Vigência:</span>
+            <span class="text-mint font-semibold">Até 2032</span>
+          </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="glass-card p-6 rounded-2xl relative group hover:border-mint transition-all border-cyan/40">
+          <div class="flex items-center justify-between mb-4">
+            <span class="w-9 h-9 rounded-xl bg-cyan text-obsidian font-extrabold flex items-center justify-center text-sm shadow-glow-cyan">
+              8
+            </span>
+            <span class="text-[10px] text-cyan uppercase font-bold tracking-wider">Economia Real</span>
+          </div>
+          <h3 class="text-base font-bold text-white group-hover:text-cyan transition-colors">
+            Comprovação de Investimentos
+          </h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Orientação passo a passo contínua para aplicar o crédito outorgado com 100% de segurança jurídica e sem qualquer risco de autuação.
+          </p>
+          <div class="mt-4 pt-3 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+            <span>Segurança:</span>
+            <span class="text-cyan font-semibold">Trilha de Auditoria</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Banner at bottom of Step Section -->
+      <div class="mt-12 p-6 rounded-2xl glass-card border border-mint/30 bg-gradient-to-r from-mint/10 via-obsidian to-cyan/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-mint/20 text-mint flex items-center justify-center flex-shrink-0">
+            <i data-lucide="zap" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-white">Cada etapa avança com visibilidade total</h4>
+            <p class="text-xs text-slate-300">Você acompanha tudo em tempo real na tela, sem precisar ligar ou cobrar ninguém.</p>
+          </div>
+        </div>
+        <a href="simulador.html" class="btn-mint py-3 px-6 rounded-xl text-xs uppercase tracking-wider font-extrabold whitespace-nowrap">
+          Fazer Diagnóstico Gratuito ↗
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 4: Tudo Que a Plataforma Faz Por Você
+       (Conteúdo Completo da Página 5 do Folder)
+  =========================================== -->
+  <section id="plataforma" class="py-24 bg-obsidian-card/50 border-t border-white/10 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="badge-pill">
+          <i data-lucide="layers" class="w-3.5 h-3.5 text-mint"></i>
+          TUDO NA PLATAFORMA
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Tudo que a plataforma faz por você — <span class="text-gradient-mint">sem burocracia</span>
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed">
+          Substituímos pastas desorganizadas e consultorias manuais arcaicas por uma suíte completa de gestão tributária inteligente.
+        </p>
+      </div>
+
+      <!-- 5 Main Features Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Feature 1 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-mint/10 text-mint flex items-center justify-center border border-mint/20">
+            <i data-lucide="check-circle" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Diagnóstico Automático de Elegibilidade</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Resultado em minutos, sem necessidade de reuniões manuais intermináveis: saiba imediatamente se a sua empresa tem direito ao benefício do ProGoiás.
+          </p>
+          <div class="text-xs text-mint font-semibold flex items-center gap-1 pt-2">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Inteligência de triagem SEFAZ
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-cyan/10 text-cyan flex items-center justify-center border border-cyan/20">
+            <i data-lucide="trending-up" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Simulação Precisa de Economia</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Quanto sua empresa pode deixar de pagar de ICMS, com números claros, memórias de cálculo detalhadas e personalizadas para a sua operação.
+          </p>
+          <div class="text-xs text-cyan font-semibold flex items-center gap-1 pt-2">
+            <i data-lucide="calculator" class="w-3.5 h-3.5"></i> Baseado no faturamento e alíquotas reais
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+            <i data-lucide="folder-lock" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Central Segura de Documentos</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Checklist guiado e upload organizado em nuvem com criptografia: nunca mais um documento perdido, certidão vencida ou etapa esquecida.
+          </p>
+          <div class="text-xs text-emerald-400 font-semibold flex items-center gap-1 pt-2">
+            <i data-lucide="check" class="w-3.5 h-3.5"></i> Zero perda de prazos governamentais
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center border border-purple-500/20">
+            <i data-lucide="file-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Relatórios e Pareceres Automáticos</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Geração automática de relatórios em PDF no padrão técnico exigido pelo Governo de Goiás, sem esforço braçal e sem divergências de leiaute.
+          </p>
+          <div class="text-xs text-purple-400 font-semibold flex items-center gap-1 pt-2">
+            <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Padrão GRE / SEFAZ Oficial
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="glass-card p-6 rounded-2xl space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center border border-amber-500/20">
+            <i data-lucide="messages-square" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Assistente Especialista de Dúvidas</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Tire questões regulatórias sobre o ProGoiás a qualquer momento na plataforma, sem precisar aguardar dias pelo retorno de uma consultoria.
+          </p>
+          <div class="text-xs text-amber-400 font-semibold flex items-center gap-1 pt-2">
+            <i data-lucide="clock" class="w-3.5 h-3.5"></i> Respostas ágeis e embasadas
+          </div>
+        </div>
+
+        <!-- CTA Feature Box -->
+        <div class="glass-card p-6 rounded-2xl bg-gradient-to-br from-mint/15 via-obsidian-card to-cyan/15 border-mint/30 flex flex-col justify-between space-y-6">
+          <div class="space-y-2">
+            <span class="badge-pill !text-[10px]">PLATAFORMA COMPLETA</span>
+            <h3 class="text-xl font-bold text-white">Veja a plataforma em ação</h3>
+            <p class="text-xs text-slate-300">
+              Conheça a interface e o funcionamento prático da esteira antes de assinar qualquer contrato ou compromisso comercial.
+            </p>
+          </div>
+          <a href="simulador.html" class="btn-mint text-center py-3.5 px-6 rounded-xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2">
+            <span>Iniciar Diagnóstico Sem Custo</span>
+            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 5: Sinais, Mitos e Erros
+       (Conteúdo Completo da Página 6 do Folder)
+  =========================================== -->
+  <section id="mitos" class="py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+        <div class="badge-pill">
+          <i data-lucide="help-circle" class="w-3.5 h-3.5 text-warning"></i>
+          SINAIS, MITOS E ERROS
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Antes de decidir, confira estes pontos
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed">
+          Perguntas e critérios rápidos que ajudam o empresário a saber se vale a pena investigar o ProGoiás agora.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left: The Great Myth Buster (PMEs) -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- Myth Card -->
+          <div class="glass-card p-8 rounded-3xl border-mint/40 bg-gradient-to-b from-mint/10 via-obsidian-card to-obsidian-card space-y-5">
+            <div class="flex items-center justify-between">
+              <span class="badge-pill !bg-mint/20 !border-mint/50">MITO OU VERDADE?</span>
+              <span class="text-xs text-slate-400 font-mono">Página 06 / 09</span>
+            </div>
+
+            <h3 class="font-display text-2xl sm:text-3xl font-extrabold text-white leading-tight">
+              "O ProGoiás é só para grandes empresas multinacionais?"
+            </h3>
+
+            <div class="p-4 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs flex items-start gap-3">
+              <i data-lucide="x-circle" class="w-5 h-5 flex-shrink-0 text-red-400 mt-0.5"></i>
+              <div>
+                <strong class="font-bold text-white block mb-0.5">Mito Perigoso:</strong>
+                O porte, sozinho, não responde se o seu projeto merece análise. Centenas de empresários perdem dinheiro todos os meses por acharem que seu negócio é "pequeno demais".
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-mint/10 border border-mint/30 text-mint text-xs flex items-start gap-3">
+              <i data-lucide="check-circle-2" class="w-5 h-5 flex-shrink-0 text-mint mt-0.5"></i>
+              <div>
+                <strong class="font-bold text-white block mb-0.5">A Realidade:</strong>
+                O ProGoiás é fundamental para <strong class="text-white">pequenas e médias empresas</strong>. Ao reduzir o ICMS devido, a PME estanca a sangria de caixa, aumenta sua margem de lucro líquido e ganha fôlego competitivo para desbancar concorrentes que ainda operam com custos tributários cheios.
+              </div>
+            </div>
+
+            <!-- Image preview of the slide -->
+            <div class="relative rounded-xl overflow-hidden border border-white/10 group cursor-pointer" onclick="openLightbox('assets/sobre/slide-05-mito-grandes-empresas.jpg', 'Mito ou Verdade: ProGoiás é só para grandes empresas?')">
+              <img src="assets/sobre/slide-05-mito-grandes-empresas.jpg" alt="Slide ProGoiás para Pequenas e Médias Empresas" class="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-80"></div>
+              <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+                <span class="text-xs text-white font-semibold flex items-center gap-1.5">
+                  <i data-lucide="zoom-in" class="w-4 h-4 text-mint"></i> Ver Lâmina Completa
+                </span>
+                <span class="badge-pill !py-0.5 !px-2 !text-[10px]">LÂMINA 05</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Indústrias Callout -->
+          <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan/10 text-cyan flex items-center justify-center flex-shrink-0">
+              <i data-lucide="factory" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <span class="text-[10px] text-cyan uppercase font-bold tracking-wider">PROGOIÁS PARA INDÚSTRIAS</span>
+              <h4 class="text-sm font-bold text-white">Sua indústria já analisou o benefício?</h4>
+              <p class="text-xs text-slate-300 mt-0.5">Implantação de nova unidade, ampliação da fábrica existente ou revitalização do negócio podem abrir uma oportunidade tributária imediata.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: 5 Signals & 3 Common Mistakes -->
+        <div class="lg:col-span-6 space-y-6">
+          
+          <!-- 5 Signals Card -->
+          <div class="glass-card p-6 rounded-3xl space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="badge-pill-cyan badge-pill">SINAIS DE OPORTUNIDADE</span>
+              <span class="text-xs text-cyan font-semibold">Triagem Rápida</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">5 sinais de que vale investigar o ProGoiás hoje</h3>
+            
+            <ul class="space-y-3 text-xs text-slate-300">
+              <li class="flex items-start gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                <div class="w-5 h-5 rounded-full bg-cyan/20 text-cyan flex items-center justify-center flex-shrink-0 mt-0.5">1</div>
+                <div><strong class="text-white">Operação localizada em Goiás:</strong> Indústrias, agroindústrias, atacadistas ou operadores logísticos sediados no estado.</div>
+              </li>
+              <li class="flex items-start gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                <div class="w-5 h-5 rounded-full bg-cyan/20 text-cyan flex items-center justify-center flex-shrink-0 mt-0.5">2</div>
+                <div><strong class="text-white">Planos de expansão:</strong> Aquisição de novos maquinários, aumento de galpão ou ampliação de linhas de produtos.</div>
+              </li>
+              <li class="flex items-start gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                <div class="w-5 h-5 rounded-full bg-cyan/20 text-cyan flex items-center justify-center flex-shrink-0 mt-0.5">3</div>
+                <div><strong class="text-white">Investimento contínuo:</strong> Aporte financeiro em infraestrutura produtiva ou tecnologia operacional.</div>
+              </li>
+              <li class="flex items-start gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                <div class="w-5 h-5 rounded-full bg-cyan/20 text-cyan flex items-center justify-center flex-shrink-0 mt-0.5">4</div>
+                <div><strong class="text-white">ICMS relevante no DRE:</strong> Volume de recolhimento mensal que pesa no fluxo de caixa da empresa.</div>
+              </li>
+              <li class="flex items-start gap-3 p-2.5 rounded-xl bg-white/[0.02] border border-white/5">
+                <div class="w-5 h-5 rounded-full bg-cyan/20 text-cyan flex items-center justify-center flex-shrink-0 mt-0.5">5</div>
+                <div><strong class="text-white">Nenhuma simulação recente:</strong> Mais de 12 meses sem checagem de regras atualizadas e enquadramentos fiscais.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3 Errors to Avoid -->
+          <div class="glass-card p-6 rounded-3xl space-y-4 border-l-4 border-l-warning">
+            <div class="flex items-center justify-between">
+              <span class="badge-pill !bg-warning/10 !border-warning/30 !text-warning">EVITE RETRABALHO</span>
+              <span class="text-xs text-warning font-semibold">Atenção</span>
+            </div>
+            <h3 class="text-xl font-bold text-white">3 erros que atrasam ou travam sua adesão</h3>
+            
+            <div class="space-y-3">
+              <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
+                <i data-lucide="alert-circle" class="w-5 h-5 text-warning flex-shrink-0 mt-0.5"></i>
+                <div class="text-xs">
+                  <strong class="text-white block">1. Avaliar apenas o CNAE isolado:</strong>
+                  O código da atividade é apenas a porta de entrada. O enquadramento real depende da operação prática e destinação das mercadorias.
+                </div>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
+                <i data-lucide="alert-circle" class="w-5 h-5 text-warning flex-shrink-0 mt-0.5"></i>
+                <div class="text-xs">
+                  <strong class="text-white block">2. Documentos dispersos e desorganizados:</strong>
+                  Falta de checklist prévio gera retrabalho, pendências com auditores da SEFAZ e meses de atraso inútil.
+                </div>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
+                <i data-lucide="alert-circle" class="w-5 h-5 text-warning flex-shrink-0 mt-0.5"></i>
+                <div class="text-xs">
+                  <strong class="text-white block">3. Protocolar sem simular a viabilidade econômica:</strong>
+                  Avançar no processo sem uma memória de cálculo oficial pode resultar em desvantagem fiscal ou metas inalcançáveis de investimento.
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="simulador.html" class="btn-mint w-full py-3 rounded-xl text-xs uppercase tracking-wider font-extrabold flex items-center justify-center gap-2">
+                <span>Trocar Suposição por Triagem com Dados</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 6: Galeria das Lâminas do Folder
+       (Visualizador das Figuras em /assets/sobre)
+  =========================================== -->
+  <section id="galeria" class="py-24 bg-obsidian-card/40 border-t border-white/10 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="badge-pill mb-3">
+            <i data-lucide="image" class="w-3.5 h-3.5 text-mint"></i>
+            MATERIAL OFICIAL DA BI 4YOU
+          </div>
+          <h2 class="font-display text-3xl font-extrabold text-white">
+            Lâminas & Infográficos da Jornada ProGoiás Fácil
+          </h2>
+          <p class="text-slate-300 text-sm mt-1">
+            Clique nas lâminas abaixo para visualizar os dados técnicos, fluxos operacionais e diretrizes do benefício fiscal.
+          </p>
+        </div>
+        <div class="text-xs text-slate-400 flex items-center gap-2">
+          <i data-lucide="info" class="w-4 h-4 text-mint"></i>
+          <span>Clique em qualquer cartão para ampliar</span>
+        </div>
+      </div>
+
+      <!-- Slides Grid (6 Principal Selected Slides) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Slide 4: Simulação de Economia -->
+        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-mint transition-all"
+          onclick="openLightbox('assets/sobre/slide-04-quanto-pode-economizar.jpg', 'Quanto sua indústria pode economizar?')">
+          <div class="relative h-60 overflow-hidden">
+            <img src="assets/sobre/slide-04-quanto-pode-economizar.jpg" alt="Quanto sua indústria pode economizar" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-70"></div>
+            <span class="absolute top-3 right-3 badge-pill !py-0.5 !px-2 !text-[10px]">LÂMINA 04</span>
+          </div>
+          <div class="p-4 space-y-1">
+            <span class="text-[10px] text-mint uppercase font-bold tracking-wider">Simulação</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-mint transition-colors">Quanto sua indústria pode economizar?</h4>
+            <p class="text-xs text-slate-400">Troque a suposição por uma estimativa baseada nos dados reais da operação.</p>
+          </div>
+        </div>
+
+        <!-- Slide 6: Quer aderir? Comece pela etapa certa -->
+        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-mint transition-all"
+          onclick="openLightbox('assets/sobre/slide-06-comece-etapa-certa.jpg', 'Quer aderir? Comece pela etapa certa.')">
+          <div class="relative h-60 overflow-hidden">
+            <img src="assets/sobre/slide-06-comece-etapa-certa.jpg" alt="Comece pela etapa certa" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-70"></div>
+            <span class="absolute top-3 right-3 badge-pill !py-0.5 !px-2 !text-[10px]">LÂMINA 06</span>
+          </div>
+          <div class="p-4 space-y-1">
+            <span class="text-[10px] text-cyan uppercase font-bold tracking-wider">Adesão ProGoiás</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-cyan transition-colors">Comece pela etapa certa</h4>
+            <p class="text-xs text-slate-400">Diagnóstico, simulação e documentos vêm antes do protocolo.</p>
+          </div>
+        </div>
+
+        <!-- Slide 9: Organização vem antes da pressa -->
+        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-mint transition-all"
+          onclick="openLightbox('assets/sobre/slide-09-organizacao-antes-da-pressa.jpg', 'Organização vem antes da pressa.')">
+          <div class="relative h-60 overflow-hidden">
+            <img src="assets/sobre/slide-09-organizacao-antes-da-pressa.jpg" alt="Organização antes da pressa" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-70"></div>
+            <span class="absolute top-3 right-3 badge-pill !py-0.5 !px-2 !text-[10px]">LÂMINA 09</span>
+          </div>
+          <div class="p-4 space-y-1">
+            <span class="text-[10px] text-mint uppercase font-bold tracking-wider">Documentos</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-mint transition-colors">Organização vem antes da pressa</h4>
+            <p class="text-xs text-slate-400">O checklist correto depende do perfil da empresa e da etapa do projeto.</p>
+          </div>
+        </div>
+
+        <!-- Slide 2: 5 sinais de oportunidade -->
+        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-mint transition-all"
+          onclick="openLightbox('assets/sobre/slide-02-cinco-sinais.jpg', '5 sinais de que vale investigar o ProGoiás')">
+          <div class="relative h-60 overflow-hidden">
+            <img src="assets/sobre/slide-02-cinco-sinais.jpg" alt="5 sinais de oportunidade" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-70"></div>
+            <span class="absolute top-3 right-3 badge-pill !py-0.5 !px-2 !text-[10px]">LÂMINA 02</span>
+          </div>
+          <div class="p-4 space-y-1">
+            <span class="text-[10px] text-cyan uppercase font-bold tracking-wider">Oportunidade</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-cyan transition-colors">5 sinais de oportunidade</h4>
+            <p class="text-xs text-slate-400">Indústria em Goiás, expansão, investimento e ICMS expressivo.</p>
+          </div>
+        </div>
+
+        <!-- Slide 8: Para Contadores -->
+        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-mint transition-all"
+          onclick="openLightbox('assets/sobre/slide-08-papel-do-contador.jpg', 'Seu papel começa antes da escrituração')">
+          <div class="relative h-60 overflow-hidden">
+            <img src="assets/sobre/slide-08-papel-do-contador.jpg" alt="Para Contadores" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-70"></div>
+            <span class="absolute top-3 right-3 badge-pill !py-0.5 !px-2 !text-[10px]">LÂMINA 08</span>
+          </div>
+          <div class="p-4 space-y-1">
+            <span class="text-[10px] text-warning uppercase font-bold tracking-wider">Parceiro Contábil</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-warning transition-colors">Antes da escrituração</h4>
+            <p class="text-xs text-slate-400">Transforme dados fiscais em uma decisão mais bem informada para o cliente.</p>
+          </div>
+        </div>
+
+        <!-- Slide 12: Pare de depender do talvez -->
+        <div class="glass-card rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-mint transition-all"
+          onclick="openLightbox('assets/sobre/slide-12-pare-de-depender-do-talvez.jpg', 'Sua empresa pode aderir? Pare de depender do talvez.')">
+          <div class="relative h-60 overflow-hidden">
+            <img src="assets/sobre/slide-12-pare-de-depender-do-talvez.jpg" alt="Pare de depender do talvez" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-transparent opacity-70"></div>
+            <span class="absolute top-3 right-3 badge-pill !py-0.5 !px-2 !text-[10px]">LÂMINA 12</span>
+          </div>
+          <div class="p-4 space-y-1">
+            <span class="text-[10px] text-mint uppercase font-bold tracking-wider">Decisão Final</span>
+            <h4 class="text-sm font-bold text-white group-hover:text-mint transition-colors">Pare de depender do "talvez"</h4>
+            <p class="text-xs text-slate-400">Responda às perguntas iniciais e descubra em minutos o que precisa ser feito.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION: Serviço e Preço (Diagnóstico e Simulação)
+       Stripe Payment Link: https://buy.stripe.com/8x26oG1Ru8T9gZNe5B8EM09
+       Stripe Price ID: price_1UJDLcBNlhuqVrGilQHn7RHO
+  =========================================== -->
+  <section id="planos" class="py-24 border-t border-white/10 relative bg-obsidian-card/40">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-14">
+        <div class="badge-pill">
+          <i data-lucide="tag" class="w-3.5 h-3.5 text-mint"></i>
+          SERVIÇO E PREÇO
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+          Não é um Plano.<br>
+          <span class="text-gradient-mint">É um Serviço Avulso.</span>
+        </h2>
+        <p class="text-slate-300 text-base leading-relaxed">
+          O Serviço Avulso de Diagnóstico e Simulação dos pré-requisitos para enquadramento e adesão ao ProGoiás —
+          uma cobrança única, sem mensalidade e sem assinatura.
+        </p>
+      </div>
+
+      <!-- Card -->
+      <div class="relative group max-w-lg mx-auto">
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-mint/40 via-cyan/30 to-mint/20 rounded-3xl blur-xl opacity-70 group-hover:opacity-100 transition duration-1000"></div>
+        <div class="relative glass-card rounded-2xl p-8 sm:p-10 border border-mint/30 bg-obsidian-card/90 shadow-2xl">
+          <span class="badge-pill !bg-mint/20 !border-mint/50 mb-4 inline-flex">⭐ Serviço Avulso — Pagamento Único</span>
+          <h3 class="font-display text-2xl font-extrabold text-white mb-1">Diagnóstico e Simulação</h3>
+          <p class="text-slate-300 text-sm mb-6">Diagnóstico dos pré-requisitos para enquadramento e simulação
+            financeira da adesão ao ProGoiás. Cobrança única, sem mensalidade.</p>
+          <div class="flex items-end gap-2 mb-6">
+            <span class="text-slate-300 text-sm">R$</span>
+            <span class="font-display font-extrabold text-white text-5xl">97</span>
+            <span class="text-slate-300 text-sm mb-1">,00 (pagamento único)</span>
+          </div>
+          <ul class="space-y-2.5 mb-8 text-sm text-slate-300">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-mint flex-shrink-0"></i>Diagnóstico automático de elegibilidade por CNAE</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-mint flex-shrink-0"></i>Simulação financeira personalizada com memória de cálculo</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-mint flex-shrink-0"></i>Checklist dos pré-requisitos e documentos para enquadramento</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-mint flex-shrink-0"></i>Relatório técnico em PDF no padrão SEFAZ</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-mint flex-shrink-0"></i>Suporte por WhatsApp para tirar dúvidas do resultado</li>
+          </ul>
+          <a href="https://buy.stripe.com/8x26oG1Ru8T9gZNe5B8EM09" class="btn-mint block w-full text-center py-3.5 rounded-xl text-sm font-extrabold">
+            🚀 Contratar o Serviço Avulso
+          </a>
+          <p class="text-center text-slate-400 text-xs mt-3">Pagamento único · Sem mensalidade · Sem restrição de porte</p>
+        </div>
+      </div>
+
+      <p class="text-center text-slate-500 text-xs mt-8">🔒 Pagamento único 100% seguro via Stripe · Sem mensalidade · Sem taxa de setup</p>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 7: Urgência & CTA Final
+  =========================================== -->
+  <section class="py-24 relative overflow-hidden">
+    
+    <!-- Background Ambient Glow -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-mint/5 to-obsidian pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      
+      <!-- Warning Box -->
+      <div class="inline-flex items-center gap-2 p-3 px-5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-8">
+        <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400"></i>
+        <span>Cada mês de atraso é benefício perdido que não pode ser recuperado. Janelas de adesão são limitadas.</span>
+      </div>
+
+      <h2 class="font-display text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
+        Sua empresa pode aderir ao ProGoiás?<br>
+        <span class="text-gradient-cyan">Pare de depender do "talvez".</span>
+      </h2>
+
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed mb-10">
+        Responda às perguntas iniciais na nossa esteira digital e descubra em minutos o valor exato que sua operação pode economizar até 2032 — <strong class="text-white">100% gratuito e sem compromisso.</strong>
+      </p>
+
+      <!-- Pill Features -->
+      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-10 text-xs font-medium text-slate-300">
+        <span class="flex items-center gap-1.5 text-mint">
+          <i data-lucide="check" class="w-4 h-4"></i> Diagnóstico Gratuito
+        </span>
+        <span class="flex items-center gap-1.5 text-cyan">
+          <i data-lucide="eye" class="w-4 h-4"></i> Veja a Plataforma Funcionando
+        </span>
+        <span class="flex items-center gap-1.5 text-white">
+          <i data-lucide="shield" class="w-4 h-4 text-emerald-400"></i> Sem Risco • Controle Total
+        </span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="simulador.html" class="btn-mint py-4 px-10 rounded-xl text-base font-extrabold shadow-glow-mint flex items-center justify-center gap-3 w-full sm:w-auto">
+          <span>FAÇA SUA SIMULAÇÃO GRATUITA</span>
+          <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+        </a>
+        <a href="https://wa.me/5562998553100" target="_blank" class="btn-secondary py-4 px-8 rounded-xl text-base font-semibold flex items-center justify-center gap-2 w-full sm:w-auto">
+          <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
+          <span>Falar com Consultor no WhatsApp</span>
+        </a>
+      </div>
+
+      <p class="text-[11px] text-slate-500 mt-6">
+        Sem taxa de setup • Sem burocracia • Com visibilidade total desde o primeiro acesso.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER INSTITUCIONAL
+  =========================================== -->
+  <footer class="border-t border-white/10 bg-obsidian py-14 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+        
+        <!-- Col 1: Brand -->
+        <div class="md:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="h-9 w-9 rounded-lg bg-mint/20 text-mint flex items-center justify-center font-bold">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="font-display font-bold text-base text-white">ProGoiás Fácil</span>
+              <span class="block text-[11px] text-slate-400">Uma solução da Bi 4You Consultoria</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+            A esteira digital completa do benefício fiscal do ProGoiás — do diagnóstico à economia real, criada e operada pela Bi 4You Consultoria Tributária.
+          </p>
+          <p class="text-[11px] text-slate-500 mt-1">CNPJ: 52.516.963/0001-33</p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="https://wa.me/5562998553100" target="_blank" class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-mint transition-colors" aria-label="WhatsApp">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+            <a href="mailto:contato@bi4you.com.br" class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-mint transition-colors" aria-label="E-mail">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.instagram.com/jornadaprogoias" target="_blank" rel="noopener" class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-mint transition-colors" aria-label="Instagram">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Links Rápidos -->
+        <div class="md:col-span-3 space-y-3">
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider">A Plataforma</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#jornada" class="hover:text-mint transition-colors">A Jornada em 8 Etapas</a></li>
+            <li><a href="#plataforma" class="hover:text-mint transition-colors">O Que o SaaS Faz</a></li>
+            <li><a href="#mitos" class="hover:text-mint transition-colors">Mitos & PMEs</a></li>
+            <li><a href="#comparativo" class="hover:text-mint transition-colors">Comparativo vs. Tradicional</a></li>
+            <li><a href="#planos" class="text-mint font-semibold hover:underline">Serviço e Preço</a></li>
+            <li><a href="simulador.html" class="hover:text-mint transition-colors">Simulador de Economia</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Navegação do Site -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="font-bold text-white text-xs uppercase tracking-wider">Contato & Atendimento</h4>
+          <p class="text-xs text-slate-400">
+            Goiânia - GO • Atendimento a empresas e indústrias em todo o Estado de Goiás.
+          </p>
+          <p class="text-xs text-slate-300">
+            <strong class="text-white">WhatsApp:</strong> (62) 99855-3100<br>
+            <strong class="text-white">E-mail:</strong> contato@bi4you.com.br<br>
+            <strong class="text-white">Instagram:</strong>
+            <a href="https://www.instagram.com/jornadaprogoias" target="_blank" rel="noopener" class="text-mint hover:underline">@jornadaprogoias</a>
+          </p>
+          <div class="pt-2">
+            <a href="landing.html" class="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white underline">
+              <i data-lucide="home" class="w-3.5 h-3.5"></i> Voltar para a Landing Page Principal
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Legal Disclaimer -->
+      <div class="pt-8 border-t border-white/10 text-[11px] text-slate-500 leading-relaxed text-center sm:text-left">
+        <p>
+          *A análise de elegibilidade e o valor exato de crédito outorgado dependem dos dados específicos da empresa, da escrituração contábil/fiscal, das características do projeto de investimento e das regras aplicáveis da legislação do Estado de Goiás. O diagnóstico preliminar não garante enquadramento automático ou homologação sem a devida tramitação regulamentar perante os órgãos competentes.
+        </p>
+        <p class="mt-4">
+          © 2026 Bi 4You Consultoria • ProGoiás Fácil. Todos os direitos reservados. • CNPJ 52.516.963/0001-33
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       FLOATING WHATSAPP BUTTON
+  =========================================== -->
+  <a href="https://wa.me/5562998553100?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20ProGoi%C3%A1s%20F%C3%A1cil%20e%20fazer%20o%20diagn%C3%B3stico%20da%20minha%20empresa."
+    target="_blank" rel="noopener"
+    aria-label="Fale Conosco pelo WhatsApp"
+    class="whatsapp-float fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] hover:bg-[#1DA851] rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-110">
+    <svg class="w-8 h-8 md:w-9 md:h-9 text-white" viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- ==========================================
+       IMAGE LIGHTBOX MODAL
+  =========================================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 lightbox-modal hidden" onclick="closeLightbox(event)">
+    <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
+      <button class="absolute -top-12 right-0 p-2 text-white/80 hover:text-white rounded-full bg-white/10" onclick="closeLightbox()">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      <img id="lightboxImg" src="" alt="Lâmina ampliada" class="max-h-[75vh] w-auto rounded-xl shadow-2xl border border-white/15 object-contain">
+      <p id="lightboxCaption" class="text-white text-sm font-semibold mt-4 text-center"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+
+    function toggleMobileMenu() {
+      mobileDrawer.classList.toggle('hidden');
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Lightbox Controls
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxCaption.textContent = caption || '';
+      lightboxModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightboxModal.classList.add('hidden');
+      document.body.style.overflow = '';
+      lightboxImg.src = '';
+    }
+
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
+</body>
+
+</html>
